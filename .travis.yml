@@ -11,7 +11,7 @@ before_install:
     - npm install hexo-cli -g
     - chmod +x ./bin/publish-to-gh-pages.sh
 after_script:
-    - ./publish-to-gh-pages.sh
+    - ./bin/publish-to-gh-pages.sh
 script:
     - hexo clean
     - hexo g
