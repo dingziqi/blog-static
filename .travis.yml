@@ -20,4 +20,4 @@ branches:
         - master
 env:
     global:
-        - GH_REF: github.com/hadronw/hadronw.github.io.git
+        - GH_REF: github.com/dingziqi/blog-static.git
