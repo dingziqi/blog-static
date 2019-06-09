@@ -9,7 +9,7 @@ install:
 before_install:
     - export TZ='Asia/Shanghai'
     - npm install hexo-cli -g
-    - chmod +x ./publish-to-gh-pages.sh
+    - chmod +x ./bin/publish-to-gh-pages.sh
 after_script:
     - ./publish-to-gh-pages.sh
 script:
