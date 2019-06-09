@@ -4,8 +4,8 @@ git clone https://${GH_REF} .deploy_git
 cd .deploy_git
 git checkout master
 cd ../
-mv .deploy_git/.git/ ./public/
-cd ./public
+mv .deploy_git/.git/ ./docs/
+cd ./docs
 git init
 git config user.name  "dingziqi"
 git config user.email "dingziqi_xtu@sina.com"
