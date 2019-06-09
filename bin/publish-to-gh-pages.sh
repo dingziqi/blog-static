@@ -6,6 +6,7 @@ git checkout master
 cd ../
 mv .deploy_git/.git/ ./public/
 cd ./public
+- git init
 git config user.name  "dingziqi"
 git config user.email "dingziqi_xtu@sina.com"
 # add commit timestamp
