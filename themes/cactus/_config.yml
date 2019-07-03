@@ -15,6 +15,7 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
+  1/0: /categories/io/
   idea: /categories/idea/
   about: /about/
   # articles: /archives/
