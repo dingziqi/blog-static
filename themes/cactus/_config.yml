@@ -133,8 +133,11 @@ open_graph:
 
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
+  enabled: false
+  shortname: blog-static'
+
+gitalk:
   enabled: true
-  shortname: blog-static
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
