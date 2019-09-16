@@ -34,9 +34,11 @@ jobs:
         npx hexo g
         cd ./docs
         git init
+        echo after init
         git config user.name dingziqi
         git config user.email dingziqi_xtu@sina.com
         git add -A
         git commit -m 'action commit'
+        echo before push
         git push -u -f https://github.com/dingziqi/blog-static.git HEAD:gh-pages
 
