@@ -23,9 +23,9 @@ jobs:
       with:
         args: install
 
-    - name: build and depoly
+    - name: build and deploy
       run: |
         npx hexo clean
         npx hexo g
-        npx hexo depoly
+        npx hexo deploy
 
