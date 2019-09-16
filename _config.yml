@@ -80,4 +80,10 @@ theme: cactus
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/dingziqi/blog-static.git
+  branch: [master]
+  message: [action commit]
+  name: [dingziqi]
+  email: [dingziqi_xtu@sina.com]
+
