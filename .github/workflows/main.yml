@@ -13,6 +13,10 @@ jobs:
     - name: init
       uses: actions/checkout@v1
 
+    - name: checkGit
+      run:
+        - git version
+
     - name: setup node
       uses: actions/setup-node@v1
       with:
