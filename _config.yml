@@ -81,7 +81,7 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:dingziqi/blog-static.git
+  repo: https://github.com/dingziqi/blog-static.git
   branch: master
   message: action commit
   name: dingziqi

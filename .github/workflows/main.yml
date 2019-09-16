@@ -23,6 +23,11 @@ jobs:
       with:
         args: install
 
+    - name: Clean
+      uses: heowc/action-hexo@master
+      with:
+        args: clean
+
     - name: build and deploy
       run: |
         npx hexo clean
