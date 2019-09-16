@@ -15,7 +15,7 @@ jobs:
 
     - name: checkGit
       run:
-        - git version
+        git version
 
     - name: setup node
       uses: actions/setup-node@v1
