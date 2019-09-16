@@ -27,20 +27,15 @@ jobs:
       with:
         args: install
 
-    - name: Clean
-      uses: heowc/action-hexo@master
-      with:
-        args: clean
-
-    - name: Generate
-      uses: heowc/action-hexo@master
-      with:
-        args: generate
-
     - name: Deploy
-      uses: heowc/action-hexo@master
-      env:
-        EMAIL: dingziqi_xtu@sina.com
-        NAME: dingziqi
-      with:
-        args: deploy
+      run: |
+        npx hexo clean
+        npx hexo g
+        cd ./docs
+        git init
+        git config user.name dingziqi
+        git config user.email dingziqi_xtu@sina.com
+        git add -A
+        git commit -m 'action commit'
+        git push -u -f https://github.com/dingziqi/blog-static.git HEAD:gh-pages
+
