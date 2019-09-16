@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="在团队开发过程中，我们可能会要浪费一些时间在代码检查上，譬如拼写的检查、代码规范的检查。作为码农，我们当然不能把自己的时间浪费这种无意义的事情上，所以本篇我将介绍一些自动化代码检查的东西和项目实际上的应用。">
+<meta name="keywords" content="web前端,JavaScript,FE,程序员">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript代码检查及与gulp、git的结合使用">
+<meta property="og:url" content="http://dingziqi.com/2016/code-check-with-git/index.html">
+<meta property="og:site_name" content="D.Z&#39;blog">
+<meta property="og:description" content="在团队开发过程中，我们可能会要浪费一些时间在代码检查上，譬如拼写的检查、代码规范的检查。作为码农，我们当然不能把自己的时间浪费这种无意义的事情上，所以本篇我将介绍一些自动化代码检查的东西和项目实际上的应用。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xqhnl.com1.z0.glb.clouddn.com/jshint%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA.png">
+<meta property="og:image" content="http://7xqhnl.com1.z0.glb.clouddn.com/git-hooks.png">
+<meta property="og:updated_time" content="2019-09-16T07:52:42.789Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript代码检查及与gulp、git的结合使用">
+<meta name="twitter:description" content="在团队开发过程中，我们可能会要浪费一些时间在代码检查上，譬如拼写的检查、代码规范的检查。作为码农，我们当然不能把自己的时间浪费这种无意义的事情上，所以本篇我将介绍一些自动化代码检查的东西和项目实际上的应用。">
+<meta name="twitter:image" content="http://7xqhnl.com1.z0.glb.clouddn.com/jshint%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>JavaScript代码检查及与gulp、git的结合使用</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1409629_m6zyxfcrpkl.css">
+
+    <!-- gtalk-->
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+      <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="iconfont icon-arrow icon-arrow-up"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">1/0</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/webpack-devtool-config/"><i class="iconfont icon-arrow icon-arrow-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/doshere-in-window/"><i class="iconfont icon-arrow icon-arrow-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+    </span>
+    <br>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSHint"><span class="toc-number">1.</span> <span class="toc-text">JSHint</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装及使用"><span class="toc-number">1.1.</span> <span class="toc-text">安装及使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置"><span class="toc-number">1.2.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gulp-jshint"><span class="toc-number">2.</span> <span class="toc-text">gulp-jshint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-hooks"><span class="toc-number">3.</span> <span class="toc-text">git-hooks</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JavaScript代码检查及与gulp、git的结合使用
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">D.Z'blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2016-07-16T14:55:14.000Z" itemprop="datePublished">2016-07-16</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="iconfont icon-folder"></i>
+        <a class="category-link" href="/categories/io/">1/0</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>在团队开发过程中，我们可能会要浪费一些时间在代码检查上，譬如拼写的检查、代码规范的检查。作为码农，我们当然不能把自己的时间浪费这种无意义的事情上，所以本篇我将介绍一些自动化代码检查的东西和项目实际上的应用。</p>
+<a id="more"></a>
+
+<h3 id="JSHint"><a href="#JSHint" class="headerlink" title="JSHint"></a>JSHint</h3><h4 id="安装及使用"><a href="#安装及使用" class="headerlink" title="安装及使用"></a>安装及使用</h4><p><a href="http://jshint.com/" target="_blank" rel="noopener">JSHint</a>是一个用于 JavaScript 代码静态检查的一些开源项目。他是运行与 node 环境，可以对我们指定的 JavaScript 文件进行一些静态的语法分析，譬如：变量定义、拼写检查、代码风格的检查等，而且检查项是灵活可配置的，可以针对不同项目的要求配置相应的检查项。JSHint 使用方式有多种，他可以通过命令行、node_module、集成到 IDE 这些方式来执行。在 IDE 中主要是通过插件的形式来使用，大家在自己顺手的 IDE 上搜<code>JSHint</code>的插件来使用，接下来我主要讲一下在命令行中使用和以 node_module 结合 gulp 使用。</p>
+<p>我们可以通过<code>npm</code>安装 JSHint。这里需要注意的一些问题，如果我们全局安装 JSHint 他是包含了 CLI 和 JavaScript module 的，如果是本地安装则只包含 JavaScript module。<em>关于 node 中 CLI 和 JavaScript module 分别是怎么用的我后续再填坑，有兴趣的可以自己去了解先。</em></p>
+<p>因为我这里要测试命令行中使用，所以我们全局安装。然后就可以通过<code>jshint filename</code>来对制定的文件进行检查了。<br>rem 全局安装<br>npm i jshint -g</p>
+<pre><code>rem 本地安装
+npm i jshint</code></pre><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>前面我们已经知道如何对我们指定的文件进行检查了，但是他检查的规则是什么呢？JSHint 会去解析一个<code>.jshintrc</code>文件来确定如何检查，这个文件是个<code>json</code>格式的配置文件，我们可以配置一些制定项来定制我们的检查计划。里面具体的配置选项可以上官网上查找。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"undef"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里需要注意的是 JSHint 查找这个<code>.jshintrc</code>文件规则，会有多种情况：我们可以在我们命令后加上<code>--config filename</code>来执行读取对应配置文件进行检查。另外，我们可以在项目中<code>package.json</code>文件的<code>jshintConfig</code>来配置我们的<code>.jshintrc</code>文件路径。如果上面两种都没有配置的话，则是会按 JShint 默认的规则来查找配置文件：JSHint 会在当前目录查找是否有<code>.jshintrc</code>文件，如果没有找到则向文件夹上一层查找，一直到查到<code>.jshintrc</code>文件或者根目录为止。如果没有指定<code>.jshintrc</code>文件，JSHint 是不会对文件就行检查的。</p>
+<p>除了上面这种将检查项配置在<code>.jshintrc</code>文件的方式外，我们还可以直接以注释的形式将我们的检查配置写在我们的文件中。如下，如果我们的文件中有这样的注释，我们对该文件进行检查就会对未定义的变量进行检查。我们在代码文件中增加 jshint 配置并不会终止查找<code>.jshintrc</code>文件读取配置的流程，只是如果代码文件中和<code>.jshintrc</code>有相同的配置时代码文件中的配置会更高。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* jshint undef: true */</span></span><br><span class="line"></span><br><span class="line">your code</span><br></pre></td></tr></table></figure>
+
+<p>如果我们在项目中有些文件来自第三方，这些文件不要求尊求我们的规范，我们就需要将这些文件排除在我们的检查列表之外，这时我们就需要另外一个配置文件<code>.jshintignore</code>。这个文件主要用于配置哪些文件不用于 JSHint 的检查，里面可以放具体的文件名或者文件夹名（该目录下都不被检查）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_module</span><br><span class="line">app/test.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="gulp-jshint"><a href="#gulp-jshint" class="headerlink" title="gulp-jshint"></a>gulp-jshint</h3><p>在项目中我们肯定不会用命令挨个检查文件是否符合规范，所以我们通常会配合<code>gulp</code>这类自动化工具来做这些重复的事情。由于 gulp 是基于“流”的形式来处理的，所以我们无法直接使用 JSHint，我们需要安转一个<code>gulp-jshint</code>，然后就可以在我们的 gulp 任务中加入 JSHint 的检查了。下面我们罗列一个简单的使用 JSHint 检查 app 路径下所有 JS 文件的示例代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> JSHint = <span class="built_in">require</span>(<span class="string">'gulp-jshint'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'checkCode'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp</span><br><span class="line">    .src(<span class="string">'./app/**/*.js'</span>)</span><br><span class="line">    .pipe(JSHint())</span><br><span class="line">    .pipe(JSHint.reporter(<span class="string">'default'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>JSHint 检查的结果是通过命令行输出的，我们可以使用<code>.pipe(JSHint.reporter(&#39;default&#39;))</code>来使用默认的样式输出检查结果，为了增强可读性，我们通常还会使用<code>jshint-stylish</code>来对结果进行美化。<br><img src="http://7xqhnl.com1.z0.glb.clouddn.com/jshint%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA.png" alt="iamge"></p>
+<p>另外提下在某些情况下我们要检查的 js 代码可能位于其他类型文件内（如 HTML、JSX 等），我们可以通过配置来实现。还有就是自定义一个 reporter 而不是使用 JSHint.reporter。这些都可以通过查找<a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="noopener">文档</a>来了解具体的操作步骤。</p>
+<h3 id="git-hooks"><a href="#git-hooks" class="headerlink" title="git-hooks"></a>git-hooks</h3><p>以上我们就已经实现了使用 gulp 自动对项目文件进行规范检查，但是我们不想手动的去执行这个 gulp 任务，应该手动的话肯定就有人会偷懒了。所以我们考虑可以把 checkcode 任务集成到编译任务，因为前面都已经用到了 gulp 了，说明我们的项目肯定是会需要构建才能调试的，所以我们可以把 checkCode 任务集成进去。但是这样做有个缺点，我们的构建任务通常会是一个高频任务，但是 checkCode 任务肯定会是一个耗时的任务，而且项目稳定之后 checkCode 检查出的问题应该是很少的，所以这样做我们的时间浪费是不值得的，所以我们就得考虑把 checkCode 集成到一个低频的操作中去。这时就是我们的 git-hooks 登场了。</p>
+<p>通常我们都会使用 svn/git 这类工具对我们的代码进行管理，除了我们常用的那些 pull/push 功能，我们还可以利用他们提供的 hooks 来在特定的操作中加入我们自己的操作，比如我们这里将要用到的<code>pre-commit</code>hook 就能在代码 commit 之前执行我们预设的脚本。因为现在比较流行 git，所以我们接下的方案将是基于 git 来做的。</p>
+<p>我们通过<code>git init</code>或者<code>git clone</code>创建一个 git 项目时，会在项目顶层目录中生成一个<code>.git</code>文件夹（隐藏的），里面就包含了我们的一些 git 的配置信息，我们要了解的 hooks 就位于<code>hooks</code>目录下。文件夹内放置了很多 hook 的模板，不过这些<code>.sample</code>后缀的文件是不能识别的，想让他们执行只要去掉后缀即可。这里的提供的 hooks 只是客户端的 hook，在 server 端也有一些 hook，可以去<a href="https://git-scm.com/docs/githooks" target="_blank" rel="noopener">这里</a>查找全部 hook 的信息和用法。示例中的 hook 是用<code>shell</code>写的，但是他是支持<code>Ruby</code>或者<code>Python</code>来写的。<br><img src="http://7xqhnl.com1.z0.glb.clouddn.com/git-hooks.png" alt="image"></p>
+<p>下面我参考以前同事的<code>pre-commit</code>的脚本，具体内容不再叙述。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#执行gulp任务，并将结果输出到临时文件</span></span><br><span class="line">gulp checkCode | tee check.log</span><br><span class="line"></span><br><span class="line"><span class="comment">#检查gulp的check任务是否执行失败</span></span><br><span class="line"><span class="keyword">if</span> grep <span class="string">"warning"</span> check.log || grep <span class="string">"error"</span> check.log</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[31m Code check fail! Please try again! \033[0m"</span></span><br><span class="line"><span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[32m Code check success! \033[0m"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除临时文件</span></span><br><span class="line">rm check.log</span><br></pre></td></tr></table></figure>
+
+<p>至此，一套结合 git-hooks、gulp 和 JSHint 的代码检查方案就完成了。这种方案不一样会在你的项目中运用，但是了解其中运用的一些东西能帮助你拓宽下视野，对以后或许有帮助。最后，因本人水平有限，如果上文中出现一些错误，请直接指出，勿喷。</p>
+
+  </div>
+</article>
+
+
+
+
+  <div id="gitalk-container"></div>
+  <script>
+    const gitalk = new Gitalk({
+    clientID: '3a4208141f5f4dcec1d8',
+    clientSecret: '6132f41eb08ee6d6ef65824adf6c70a6dfc306bf',
+    repo: 'blog-static',
+    owner: 'dingziqi',
+    admin: ['dingziqi'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">1/0</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSHint"><span class="toc-number">1.</span> <span class="toc-text">JSHint</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装及使用"><span class="toc-number">1.1.</span> <span class="toc-text">安装及使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置"><span class="toc-number">1.2.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gulp-jshint"><span class="toc-number">2.</span> <span class="toc-text">gulp-jshint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-hooks"><span class="toc-number">3.</span> <span class="toc-text">git-hooks</span></a></li></ol>
+    </div>
+
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="iconfont icon-menu" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="iconfont icon-category" aria-hidden="true"></i> 目录</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 D.Z
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">1/0</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<!-- <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"> -->
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-125054760-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e46b40b284daa44636921a40671f422c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
