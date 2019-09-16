@@ -9,20 +9,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-
     steps:
-    - name: Clean
-      uses: heowc/action-hexo@master
+    - name: init
+      uses: actions/checkout@v1
+
+    - name: setup node
+      uses: actions/setup-node@v1
       with:
-        args: clean
-    - name: Generate
-      uses: heowc/action-hexo@master
+        node-version: '8.x'
+
+    - name: install
+      uses: nuxt/actions-yarn@master
       with:
-        args: generate
-    - name: Deploy
-      uses: heowc/action-hexo@master
-      env:
-        EMAIL: dingziqi_xtu@sina.com
-        NAME: dingziqi
-      with:
-        args: deploy
+        args: install
+
+    - name: build and depoly
+      action: |
+        npx hexo clean,
+        npx hexo g,
+        npx hexo depoly
+
