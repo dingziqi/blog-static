@@ -28,9 +28,15 @@ jobs:
       with:
         args: clean
 
-    - name: build and deploy
-      run: |
-        npx hexo clean
-        npx hexo g
-        npx hexo deploy
+    - name: Generate
+      uses: heowc/action-hexo@master
+      with:
+        args: generate
 
+    - name: Deploy
+      uses: heowc/action-hexo@master
+      env:
+        EMAIL: dingziqi_xtu@sina.com
+        NAME: dingziqi
+      with:
+        args: deploy
