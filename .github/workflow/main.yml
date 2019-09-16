@@ -1,0 +1,28 @@
+name: hexo
+
+on:
+  push:
+    branches:
+      - hexo2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - name: Clean
+      uses: heowc/action-hexo@master
+      with:
+        args: clean
+    - name: Generate
+      uses: heowc/action-hexo@master
+      with:
+        args: generate
+    - name: Deploy
+      uses: heowc/action-hexo@master
+      env:
+        EMAIL: dingziqi_xtu@sina.com
+        NAME: dingziqi
+      with:
+        args: deploy
