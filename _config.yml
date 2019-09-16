@@ -82,7 +82,7 @@ theme: cactus
 deploy:
   type: git
   repo: https://github.com/dingziqi/blog-static.git
-  branch: master
+  branch: gh-pages
   message: action commit
   name: dingziqi
   email: dingziqi_xtu@sina.com
