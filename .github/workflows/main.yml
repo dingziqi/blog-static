@@ -29,8 +29,8 @@ jobs:
         args: install
 
     - name: Deploy
-      env: 
-       Travis_gh_token: ${{ secrets.Travis_gh_token }}
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
       run: |
         npx hexo clean
         npx hexo g
@@ -43,5 +43,5 @@ jobs:
         git commit -m 'action commit'
         echo before push
         echo $Travis_gh_token
-        git push -u -f https://github.com/dingziqi/blog-static.git HEAD:gh-pages
+        git push -u -f https://dingziqi:${blog-static}@github.com/dingziqi/blog-static.git HEAD:gh-pages
 
