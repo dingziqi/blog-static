@@ -29,6 +29,8 @@ jobs:
         args: install
 
     - name: Deploy
+      env: 
+       Travis_gh_token: ${{ secrets.Travis_gh_token }}
       run: |
         npx hexo clean
         npx hexo g
