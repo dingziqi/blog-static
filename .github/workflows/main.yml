@@ -15,7 +15,8 @@ jobs:
 
     - name: checkGit
       run:
-        git config --list
+        git config user.name=dingziqi
+        git config user.email=dingziqi_xtu@sina.com
 
     - name: setup node
       uses: actions/setup-node@v1
