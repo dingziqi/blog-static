@@ -1,7 +1,7 @@
 ---
 id: webpack-devtool-config
 title: 详解 webpack devtool 配置
-categories: 1/0
+categories: 0/1
 date: 2019-05-17 19:41:52
 tags:
 ---

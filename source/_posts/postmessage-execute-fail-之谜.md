@@ -1,7 +1,7 @@
 ---
 id: why-postmessage-execute-fail
 title: postMessage execute fail 之谜
-categories: 1/0
+categories: 0/1
 date: 2019-11-21 15:39:44
 tags:
 ---

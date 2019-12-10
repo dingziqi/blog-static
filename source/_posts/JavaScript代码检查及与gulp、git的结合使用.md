@@ -1,7 +1,7 @@
 ---
 id: code-check-with-git
 title: JavaScript代码检查及与gulp、git的结合使用
-categories: 1/0
+categories: 0/1
 date: 2016-07-16 14:55:14
 tags:
 ---

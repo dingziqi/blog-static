@@ -1,7 +1,7 @@
 ---
 id: trouble-shooting-in-github-action
 title: github的action功能实践中的问题
-categories: 1/0
+categories: 0/1
 date: 2019-09-17 19:28:06
 tags:
   - 踩坑

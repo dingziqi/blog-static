@@ -1,7 +1,7 @@
 ---
 id: trouble-shooting-in-nextjs
 title: next.js相关问题
-categories: 1/0
+categories: 0/1
 date: 2019-09-12 12:16:24
 tags:
   - next.js

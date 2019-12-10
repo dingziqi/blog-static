@@ -1,7 +1,7 @@
 ---
 id: doshere-in-window
 title: 几种在window 下快速的打开以当前路径为root的命令行
-categories: 1/0
+categories: 0/1
 date: 2016-06-13 12:01:05
 tags:
 ---
