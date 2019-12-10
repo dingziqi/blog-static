@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="本目录为 www.acm.org 官方在 2012 发布的计算机科学的知识目录，原文地址在: https://dl.acm.org/ccs/ccs_flat.cfm。  硬件印刷电路板 Electromagnetic interference and compatibility PCB design and layout  通信硬件、接口及存储 Signal processing systems">
+<meta name="keywords" content="web前端,JavaScript,FE,程序员">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCS2012 知识图谱">
+<meta property="og:url" content="http://dingziqi.com/2019/category-in-css2012/index.html">
+<meta property="og:site_name" content="D.Z&#39;blog">
+<meta property="og:description" content="本目录为 www.acm.org 官方在 2012 发布的计算机科学的知识目录，原文地址在: https://dl.acm.org/ccs/ccs_flat.cfm。  硬件印刷电路板 Electromagnetic interference and compatibility PCB design and layout  通信硬件、接口及存储 Signal processing systems">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-10T12:10:27.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CCS2012 知识图谱">
+<meta name="twitter:description" content="本目录为 www.acm.org 官方在 2012 发布的计算机科学的知识目录，原文地址在: https://dl.acm.org/ccs/ccs_flat.cfm。  硬件印刷电路板 Electromagnetic interference and compatibility PCB design and layout  通信硬件、接口及存储 Signal processing systems">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>CCS2012 知识图谱</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1409629_m6zyxfcrpkl.css">
+
+    <!-- gtalk-->
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+      <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="iconfont icon-arrow icon-arrow-up"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/why-postmessage-execute-fail/"><i class="iconfont icon-arrow icon-arrow-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+    </span>
+    <br>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#硬件"><span class="toc-number">1.</span> <span class="toc-text">硬件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#印刷电路板"><span class="toc-number">1.1.</span> <span class="toc-text">印刷电路板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通信硬件、接口及存储"><span class="toc-number">1.2.</span> <span class="toc-text">通信硬件、接口及存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集成电路"><span class="toc-number">1.3.</span> <span class="toc-text">集成电路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超大规模集成电路"><span class="toc-number">1.4.</span> <span class="toc-text">超大规模集成电路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电力和能源"><span class="toc-number">1.5.</span> <span class="toc-text">电力和能源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电子设计自动化"><span class="toc-number">1.6.</span> <span class="toc-text">电子设计自动化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件验证"><span class="toc-number">1.7.</span> <span class="toc-text">硬件验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件测试"><span class="toc-number">1.8.</span> <span class="toc-text">硬件测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#健壮性"><span class="toc-number">1.9.</span> <span class="toc-text">健壮性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新兴技术"><span class="toc-number">1.10.</span> <span class="toc-text">新兴技术</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机系统组织"><span class="toc-number">2.</span> <span class="toc-text">计算机系统组织</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#架构"><span class="toc-number">2.1.</span> <span class="toc-text">架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#嵌入式和网络物理系统"><span class="toc-number">2.2.</span> <span class="toc-text">嵌入式和网络物理系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实时系统"><span class="toc-number">2.3.</span> <span class="toc-text">实时系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可靠且容错的系统和网络"><span class="toc-number">2.4.</span> <span class="toc-text">可靠且容错的系统和网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络"><span class="toc-number">3.</span> <span class="toc-text">网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络架构"><span class="toc-number">3.1.</span> <span class="toc-text">网络架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络协议"><span class="toc-number">3.2.</span> <span class="toc-text">网络协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络组件"><span class="toc-number">3.3.</span> <span class="toc-text">网络组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络算法"><span class="toc-number">3.4.</span> <span class="toc-text">网络算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络性能评估"><span class="toc-number">3.5.</span> <span class="toc-text">网络性能评估</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络属性"><span class="toc-number">3.6.</span> <span class="toc-text">网络属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络服务"><span class="toc-number">3.7.</span> <span class="toc-text">网络服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络类型"><span class="toc-number">3.8.</span> <span class="toc-text">网络类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件及其工程"><span class="toc-number">4.</span> <span class="toc-text">软件及其工程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件组织和属性"><span class="toc-number">4.1.</span> <span class="toc-text">软件组织和属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件表示法及工具"><span class="toc-number">4.2.</span> <span class="toc-text">软件表示法及工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件创建及管理"><span class="toc-number">4.3.</span> <span class="toc-text">软件创建及管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算理论"><span class="toc-number">5.</span> <span class="toc-text">计算理论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算模型"><span class="toc-number">5.1.</span> <span class="toc-text">计算模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形式语言及自动机理论"><span class="toc-number">5.2.</span> <span class="toc-text">形式语言及自动机理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算复杂度及密码学"><span class="toc-number">5.3.</span> <span class="toc-text">计算复杂度及密码学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑学"><span class="toc-number">5.4.</span> <span class="toc-text">逻辑学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法设计与分析"><span class="toc-number">5.5.</span> <span class="toc-text">算法设计与分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机性、几何学和离散结构"><span class="toc-number">5.6.</span> <span class="toc-text">随机性、几何学和离散结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用领域理论和算法"><span class="toc-number">5.7.</span> <span class="toc-text">应用领域理论和算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语义及推理"><span class="toc-number">5.8.</span> <span class="toc-text">语义及推理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机数学"><span class="toc-number">6.</span> <span class="toc-text">计算机数学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#离散数学"><span class="toc-number">6.1.</span> <span class="toc-text">离散数学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概览论与统计学"><span class="toc-number">6.2.</span> <span class="toc-text">概览论与统计学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学软件"><span class="toc-number">6.3.</span> <span class="toc-text">数学软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息论"><span class="toc-number">6.4.</span> <span class="toc-text">信息论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学分析"><span class="toc-number">6.5.</span> <span class="toc-text">数学分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连续数学"><span class="toc-number">6.6.</span> <span class="toc-text">连续数学</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信息系统"><span class="toc-number">7.</span> <span class="toc-text">信息系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据管理系统"><span class="toc-number">7.1.</span> <span class="toc-text">数据管理系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据存储系统"><span class="toc-number">7.2.</span> <span class="toc-text">数据存储系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息系统的应用"><span class="toc-number">7.3.</span> <span class="toc-text">信息系统的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网"><span class="toc-number">7.4.</span> <span class="toc-text">互联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息检索"><span class="toc-number">7.5.</span> <span class="toc-text">信息检索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全与隐私"><span class="toc-number">8.</span> <span class="toc-text">安全与隐私</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#密码学"><span class="toc-number">8.1.</span> <span class="toc-text">密码学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全的形式方法及理论"><span class="toc-number">8.2.</span> <span class="toc-text">安全的形式方法及理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全服务"><span class="toc-number">8.3.</span> <span class="toc-text">安全服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入侵-异常检测与恶意软件拦截"><span class="toc-number">8.4.</span> <span class="toc-text">入侵/异常检测与恶意软件拦截</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件安全"><span class="toc-number">8.5.</span> <span class="toc-text">硬件安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统安全"><span class="toc-number">8.6.</span> <span class="toc-text">系统安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络安全"><span class="toc-number">8.7.</span> <span class="toc-text">网络安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库和存储安全"><span class="toc-number">8.8.</span> <span class="toc-text">数据库和存储安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件和应用安全"><span class="toc-number">8.9.</span> <span class="toc-text">软件和应用安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全与隐私的人文与社会"><span class="toc-number">8.10.</span> <span class="toc-text">安全与隐私的人文与社会</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#以人为本的计算机"><span class="toc-number">9.</span> <span class="toc-text">以人为本的计算机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#人机交互"><span class="toc-number">9.1.</span> <span class="toc-text">人机交互</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交互设计"><span class="toc-number">9.2.</span> <span class="toc-text">交互设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协作及社交计算"><span class="toc-number">9.3.</span> <span class="toc-text">协作及社交计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#普适计算"><span class="toc-number">9.4.</span> <span class="toc-text">普适计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可视化"><span class="toc-number">9.5.</span> <span class="toc-text">可视化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助功能"><span class="toc-number">9.6.</span> <span class="toc-text">辅助功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算方法"><span class="toc-number">10.</span> <span class="toc-text">计算方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#符号和代数运算"><span class="toc-number">10.1.</span> <span class="toc-text">符号和代数运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并行计算方法"><span class="toc-number">10.2.</span> <span class="toc-text">并行计算方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人工智能"><span class="toc-number">10.3.</span> <span class="toc-text">人工智能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习"><span class="toc-number">10.4.</span> <span class="toc-text">机器学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建模与模拟"><span class="toc-number">10.5.</span> <span class="toc-text">建模与模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机图形"><span class="toc-number">10.6.</span> <span class="toc-text">计算机图形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式计算方法"><span class="toc-number">10.7.</span> <span class="toc-text">分布式计算方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并发计算方法"><span class="toc-number">10.8.</span> <span class="toc-text">并发计算方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#应用计算"><span class="toc-number">11.</span> <span class="toc-text">应用计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电子商务"><span class="toc-number">11.1.</span> <span class="toc-text">电子商务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#企业计算"><span class="toc-number">11.2.</span> <span class="toc-text">企业计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#物理科学与工程"><span class="toc-number">11.3.</span> <span class="toc-text">物理科学与工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命与医学"><span class="toc-number">11.4.</span> <span class="toc-text">生命与医学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法律、社会科学与行为科学"><span class="toc-number">11.5.</span> <span class="toc-text">法律、社会科学与行为科学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机鉴别"><span class="toc-number">11.6.</span> <span class="toc-text">计算机鉴别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人文艺术"><span class="toc-number">11.7.</span> <span class="toc-text">人文艺术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它领域的计算机"><span class="toc-number">11.8.</span> <span class="toc-text">其它领域的计算机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运筹学"><span class="toc-number">11.9.</span> <span class="toc-text">运筹学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#教育"><span class="toc-number">11.10.</span> <span class="toc-text">教育</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件管理与文字处理"><span class="toc-number">11.11.</span> <span class="toc-text">文件管理与文字处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#社会和职业话题"><span class="toc-number">12.</span> <span class="toc-text">社会和职业话题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#职业话题"><span class="toc-number">12.1.</span> <span class="toc-text">职业话题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算-技术政策"><span class="toc-number">12.2.</span> <span class="toc-text">计算/技术政策</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户特征"><span class="toc-number">12.3.</span> <span class="toc-text">用户特征</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        CCS2012 知识图谱
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">D.Z'blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-12-10T19:58:27.000Z" itemprop="datePublished">2019-12-10</time>
+        
+        (Updated: <time datetime="2019-12-10T12:10:27.191Z" itemprop="dateModified">2019-12-10</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="iconfont icon-folder"></i>
+        <a class="category-link" href="/categories/io/">0/1</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>本目录为 <a href="https://www.acm.org/" target="_blank" rel="noopener">www.acm.org</a> 官方在 2012 发布的计算机科学的知识目录，原文地址在: <a href="https://dl.acm.org/ccs/ccs_flat.cfm" target="_blank" rel="noopener">https://dl.acm.org/ccs/ccs_flat.cfm</a>。</p>
+</blockquote>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><h2 id="印刷电路板"><a href="#印刷电路板" class="headerlink" title="印刷电路板"></a><a href="https://zh.wikipedia.org/wiki/%E5%8D%B0%E5%88%B7%E7%94%B5%E8%B7%AF%E6%9D%BF" target="_blank" rel="noopener">印刷电路板</a></h2><ul>
+<li>Electromagnetic interference and compatibility</li>
+<li>PCB design and layout</li>
+</ul>
+<h2 id="通信硬件、接口及存储"><a href="#通信硬件、接口及存储" class="headerlink" title="通信硬件、接口及存储"></a>通信硬件、接口及存储</h2><ul>
+<li>Signal processing systems<ul>
+<li>Digital signal processing</li>
+<li>Beamforming</li>
+<li>Noise reduction</li>
+</ul>
+</li>
+<li>Sensors and actuators</li>
+<li>Buses and high-speed links</li>
+<li>Displays and imagers</li>
+<li>External storage</li>
+<li>Networking hardware</li>
+<li>Printers</li>
+<li>Sensor applications and deployments</li>
+<li>Sensor devices and platforms</li>
+<li>Sound-based input / output</li>
+<li>Tactile and hand-based interfaces<ul>
+<li>Touch screens</li>
+<li>Haptic devices</li>
+</ul>
+</li>
+<li>Scanners</li>
+<li>Wireless devices</li>
+<li>Wireless integrated network sensors</li>
+<li>Electro-mechanical devices<h2 id="集成电路"><a href="#集成电路" class="headerlink" title="集成电路"></a><a href="https://zh.wikipedia.org/zh-cn/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">集成电路</a></h2></li>
+<li>3D integrated circuits</li>
+<li>Interconnect<ul>
+<li>Input / output circuits</li>
+<li>Metallic interconnect</li>
+<li>Photonic and optical interconnect</li>
+<li>Radio frequency and wireless interconnect</li>
+</ul>
+</li>
+<li>Semiconductor memory<ul>
+<li>Dynamic memory</li>
+<li>Static memory</li>
+<li>Non-volatile memory</li>
+<li>Read-only memory</li>
+</ul>
+</li>
+<li>Digital switches<ul>
+<li>Transistors</li>
+<li>Logic families</li>
+</ul>
+</li>
+<li>Logic circuits<ul>
+<li>Arithmetic and datapath circuits</li>
+<li>Asynchronous circuits</li>
+<li>Combinational circuits</li>
+<li>Design modules and hierarchy</li>
+<li>Finite state machines</li>
+<li>Sequential circuits</li>
+</ul>
+</li>
+<li>Reconfigurable logic and FPGAs<ul>
+<li>Hardware accelerators</li>
+<li>High-speed input / output</li>
+<li>Programmable logic elements</li>
+<li>Programmable interconnect</li>
+<li>Reconfigurable logic applications</li>
+<li>Evolvable hardware<h2 id="超大规模集成电路"><a href="#超大规模集成电路" class="headerlink" title="超大规模集成电路"></a><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E5%A4%A7%E8%A7%84%E6%A8%A1%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF" target="_blank" rel="noopener">超大规模集成电路</a></h2></li>
+</ul>
+</li>
+<li>3D integrated circuits</li>
+<li>Analog and mixed-signal circuits<ul>
+<li>Data conversion</li>
+<li>Clock generation and timing</li>
+<li>Analog and mixed-signal circuit optimization</li>
+<li>Radio frequency and wireless circuits</li>
+<li>Wireline communication</li>
+<li>Analog and mixed-signal circuit synthesis</li>
+</ul>
+</li>
+<li>Application-specific VLSI designs<ul>
+<li>Application specific integrated circuits</li>
+<li>Application specific instruction set processors</li>
+<li>Application specific processors</li>
+</ul>
+</li>
+<li>Design reuse and communication-based design<ul>
+<li>Network on chip</li>
+<li>System on a chip</li>
+<li>Platform-based design</li>
+<li>Hard and soft IP</li>
+</ul>
+</li>
+<li>Design rules</li>
+<li>Economics of chip design and manufacturing</li>
+<li>Full-custom circuits</li>
+<li>VLSI design manufacturing considerations</li>
+<li>On-chip resource management</li>
+<li>On-chip sensors</li>
+<li>Standard cell libraries</li>
+<li>VLSI packaging<ul>
+<li>Die and wafer stacking</li>
+<li>Input / output styles</li>
+<li>Multi-chip modules</li>
+<li>Package-level interconnect</li>
+</ul>
+</li>
+<li>VLSI system specification and constraints<h2 id="电力和能源"><a href="#电力和能源" class="headerlink" title="电力和能源"></a>电力和能源</h2></li>
+<li>Thermal issues<ul>
+<li>Temperature monitoring</li>
+<li>Temperature simulation and estimation</li>
+<li>Temperature control</li>
+<li>Temperature optimization</li>
+</ul>
+</li>
+<li>Energy generation and storage<ul>
+<li>Batteries</li>
+<li>Fuel-based energy</li>
+<li>Renewable energy</li>
+<li>Reusable energy storage</li>
+</ul>
+</li>
+<li>Energy distribution<ul>
+<li>Energy metering</li>
+<li>Power conversion</li>
+<li>Power networks</li>
+<li>Smart grid</li>
+</ul>
+</li>
+<li>Impact on the environment</li>
+<li>Power estimation and optimization<ul>
+<li>Switching devices power issues</li>
+<li>Interconnect power issues</li>
+<li>Circuits power issues</li>
+<li>Chip-level power issues</li>
+<li>Platform power issues</li>
+<li>Enterprise level and data centers power issues<h2 id="电子设计自动化"><a href="#电子设计自动化" class="headerlink" title="电子设计自动化"></a><a href="https://zh.wikipedia.org/zh-hans/%E9%9B%BB%E5%AD%90%E8%A8%AD%E8%A8%88%E8%87%AA%E5%8B%95%E5%8C%96" target="_blank" rel="noopener">电子设计自动化</a></h2></li>
+</ul>
+</li>
+<li>High-level and register-transfer level synthesis<ul>
+<li>Datapath optimization</li>
+<li>Hardware-software codesign</li>
+<li>Resource binding and sharing</li>
+<li>Operations scheduling</li>
+</ul>
+</li>
+<li>Hardware description languages and compilation</li>
+<li>Logic synthesis<ul>
+<li>Combinational synthesis</li>
+<li>Circuit optimization</li>
+<li>Sequential synthesis</li>
+<li>Technology-mapping</li>
+<li>Transistor-level synthesis</li>
+</ul>
+</li>
+<li>Modeling and parameter extraction</li>
+<li>Physical design (EDA)<ul>
+<li>Clock-network synthesis</li>
+<li>Packaging</li>
+<li>Partitioning and floorplanning</li>
+<li>Placement</li>
+<li>Physical synthesis</li>
+<li>Power grid design</li>
+<li>Wire routing</li>
+</ul>
+</li>
+<li>Timing analysis<ul>
+<li>Electrical-level simulation</li>
+<li>Model-order reduction</li>
+<li>Compact delay models</li>
+<li>Static timing analysis</li>
+<li>Statistical timing analysis</li>
+<li>Transition-based timing analysis</li>
+</ul>
+</li>
+<li>Methodologies for EDA<ul>
+<li>Best practices for EDA</li>
+<li>Design databases for EDA</li>
+<li>Software tools for EDA<h2 id="硬件验证"><a href="#硬件验证" class="headerlink" title="硬件验证"></a>硬件验证</h2></li>
+</ul>
+</li>
+<li>Functional verification<ul>
+<li>Model checking</li>
+<li>Coverage metrics</li>
+<li>Equivalence checking</li>
+<li>Semi-formal verification</li>
+<li>Simulation and emulation</li>
+<li>Transaction-level verification</li>
+<li>Theorem proving and SAT solving</li>
+<li>Assertion checking</li>
+</ul>
+</li>
+<li>Physical verification<ul>
+<li>Design rule checking</li>
+<li>Layout-versus-schematics</li>
+<li>Power and thermal analysis</li>
+<li>Timing analysis and sign-off</li>
+</ul>
+</li>
+<li>Post-manufacture validation and debug<ul>
+<li>Bug detection, localization and diagnosis</li>
+<li>Bug fixing (hardware)</li>
+<li>Design for debug<h2 id="硬件测试"><a href="#硬件测试" class="headerlink" title="硬件测试"></a>硬件测试</h2></li>
+</ul>
+</li>
+<li>Analog, mixed-signal and radio frequency test</li>
+<li>Board- and system-level test</li>
+<li>Defect-based test</li>
+<li>Design for testability<ul>
+<li>Built-in self-test</li>
+<li>Online test and diagnostics</li>
+<li>Test data compression</li>
+</ul>
+</li>
+<li>Fault models and test metrics</li>
+<li>Memory test and repair</li>
+<li>Hardware reliability screening</li>
+<li>Test-pattern generation and fault simulation</li>
+<li>Testing with distributed and parallel systems<h2 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a><a href="https://zh.wikipedia.org/wiki/%E5%81%A5%E5%A3%AE%E6%80%A7_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6" target="_blank" rel="noopener">健壮性</a></h2></li>
+<li>Fault tolerance<ul>
+<li>Error detection and error correction</li>
+<li>Failure prediction</li>
+<li>Failure recovery, maintenance and self-repair</li>
+<li>Redundancy</li>
+<li>Self-checking mechanisms</li>
+<li>System-level fault tolerance</li>
+</ul>
+</li>
+<li>Design for manufacturability<ul>
+<li>Process variations</li>
+<li>Yield and cost modeling</li>
+<li>Yield and cost optimization</li>
+</ul>
+</li>
+<li>Hardware reliability<ul>
+<li>Aging of circuits and systems</li>
+<li>Circuit hardening</li>
+<li>Early-life failures and infant mortality</li>
+<li>Process, voltage and temperature variations</li>
+<li>Signal integrity and noise analysis</li>
+<li>Transient errors and upsets</li>
+</ul>
+</li>
+<li>Safety critical systems<h2 id="新兴技术"><a href="#新兴技术" class="headerlink" title="新兴技术"></a><a href="https://zh.wikipedia.org/wiki/%E6%96%B0%E5%85%B4%E6%8A%80%E6%9C%AF" target="_blank" rel="noopener">新兴技术</a></h2></li>
+<li>Analysis and design of emerging devices and systems<ul>
+<li>Emerging architectures</li>
+<li>Emerging languages and compilers</li>
+<li>Emerging simulation</li>
+<li>Emerging tools and methodologies</li>
+</ul>
+</li>
+<li>Biology-related information processing<ul>
+<li>Bio-embedded electronics</li>
+<li>Neural systems</li>
+</ul>
+</li>
+<li>Circuit substrates<ul>
+<li>III-V compounds</li>
+<li>Carbon based electronics</li>
+<li>Cellular neural networks</li>
+<li>Flexible and printable circuits</li>
+<li>Superconducting circuits</li>
+</ul>
+</li>
+<li>Electromechanical systems<ul>
+<li>Microelectromechanical systems</li>
+<li>Nanoelectromechanical systems</li>
+</ul>
+</li>
+<li>Emerging interfaces</li>
+<li>Memory and dense storage</li>
+<li>Emerging optical and photonic technologies</li>
+<li>Reversible logic</li>
+<li>Plasmonics</li>
+<li>Quantum technologies<ul>
+<li>Single electron devices</li>
+<li>Tunneling devices</li>
+<li>Quantum computation<ul>
+<li>Quantum communication and cryptography</li>
+<li>Quantum error correction and fault tolerance</li>
+</ul>
+</li>
+<li>Quantum dots and cellular automata</li>
+</ul>
+</li>
+<li>Spintronics and magnetic technologies<h1 id="计算机系统组织"><a href="#计算机系统组织" class="headerlink" title="计算机系统组织"></a>计算机系统组织</h1><h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2></li>
+<li>Serial architectures<ul>
+<li>Reduced instruction set computing</li>
+<li>Complex instruction set computing</li>
+<li>Superscalar architectures</li>
+<li>Pipeline computing</li>
+<li>Stack machines</li>
+</ul>
+</li>
+<li>Parallel architectures<ul>
+<li>Very long instruction word</li>
+<li>Interconnection architectures</li>
+<li>Multiple instruction, multiple data</li>
+<li>Cellular architectures</li>
+<li>Multiple instruction, single data</li>
+<li>Single instruction, multiple data</li>
+<li>Systolic arrays</li>
+<li>Multicore architectures</li>
+</ul>
+</li>
+<li>Distributed architectures<ul>
+<li>Cloud computing</li>
+<li>Client-server architectures</li>
+<li>n-tier architectures</li>
+<li>Peer-to-peer architectures</li>
+<li>Grid computing</li>
+</ul>
+</li>
+<li>Other architectures<ul>
+<li>Neural networks</li>
+<li>Reconfigurable computing</li>
+<li>Analog computers</li>
+<li>Data flow architectures</li>
+<li>Heterogeneous (hybrid) systems</li>
+<li>Self-organizing autonomic computing</li>
+<li>Optical computing</li>
+<li>Quantum computing</li>
+<li>Molecular computing</li>
+<li>High-level language architectures</li>
+<li>Special purpose systems<h2 id="嵌入式和网络物理系统"><a href="#嵌入式和网络物理系统" class="headerlink" title="嵌入式和网络物理系统"></a>嵌入式和网络物理系统</h2></li>
+</ul>
+</li>
+<li>Sensor networks</li>
+<li>Robotics<ul>
+<li>Robotic components</li>
+<li>Robotic control<ul>
+<li>Evolutionary robotics</li>
+</ul>
+</li>
+<li>Robotic autonomy</li>
+<li>External interfaces for robotics</li>
+</ul>
+</li>
+<li>Sensors and actuators</li>
+<li>System on a chip</li>
+<li>Embedded systems<ul>
+<li>Firmware</li>
+<li>Embedded hardware</li>
+<li>Embedded software<h2 id="实时系统"><a href="#实时系统" class="headerlink" title="实时系统"></a>实时系统</h2></li>
+</ul>
+</li>
+<li>Real-time operating systems</li>
+<li>Real-time languages</li>
+<li>Real-time system specification</li>
+<li>Real-time system architecture<h2 id="可靠且容错的系统和网络"><a href="#可靠且容错的系统和网络" class="headerlink" title="可靠且容错的系统和网络"></a>可靠且容错的系统和网络</h2></li>
+<li>Reliability</li>
+<li>Availability</li>
+<li>Maintainability and maintenance</li>
+<li>Processors and memory architectures</li>
+<li>Secondary storage organization</li>
+<li>Redundancy</li>
+<li>Fault-tolerant network topologies<h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="网络架构"><a href="#网络架构" class="headerlink" title="网络架构"></a><a href="https://en.wikipedia.org/wiki/Network_architecture" target="_blank" rel="noopener">网络架构</a></h2></li>
+<li>Network design principles<ul>
+<li>Layering</li>
+<li>Naming and addressing</li>
+</ul>
+</li>
+<li>Programming interfaces<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2></li>
+<li>Network protocol design</li>
+<li>Protocol correctness<ul>
+<li>Protocol testing and verification</li>
+<li>Formal specifications</li>
+</ul>
+</li>
+<li>Link-layer protocols</li>
+<li>Network layer protocols<ul>
+<li>Routing protocols</li>
+<li>Signaling protocols</li>
+</ul>
+</li>
+<li>Transport protocols</li>
+<li>Session protocols</li>
+<li>Presentation protocols</li>
+<li>Application layer protocols<ul>
+<li>Peer-to-peer protocols</li>
+</ul>
+</li>
+<li>OAM protocols<ul>
+<li>Time synchronization protocols</li>
+<li>Network policy</li>
+</ul>
+</li>
+<li>Cross-layer protocols</li>
+<li>Network File System (NFS) protocol<h2 id="网络组件"><a href="#网络组件" class="headerlink" title="网络组件"></a>网络组件</h2></li>
+<li>Intermediate nodes<ul>
+<li>Routers</li>
+<li>Bridges and switches</li>
+</ul>
+</li>
+<li>Physical links<ul>
+<li>Repeaters</li>
+</ul>
+</li>
+<li>Middle boxes / network appliances</li>
+<li>End nodes<ul>
+<li>Network adapters</li>
+<li>Network servers</li>
+</ul>
+</li>
+<li>Wireless access points, base stations and infrastructure<ul>
+<li>Cognitive radios</li>
+</ul>
+</li>
+<li>Logical nodes<ul>
+<li>Network domains<h2 id="网络算法"><a href="#网络算法" class="headerlink" title="网络算法"></a>网络算法</h2></li>
+</ul>
+</li>
+<li>Data path algorithms<ul>
+<li>Packet classification</li>
+<li>Deep packet inspection</li>
+<li>Packet scheduling</li>
+</ul>
+</li>
+<li>Control path algorithms<ul>
+<li>Network resources allocation</li>
+<li>Network control algorithms</li>
+<li>Traffic engineering algorithms</li>
+<li>Network design and planning algorithms</li>
+</ul>
+</li>
+<li>Network economics<h2 id="网络性能评估"><a href="#网络性能评估" class="headerlink" title="网络性能评估"></a>网络性能评估</h2></li>
+<li>Network performance modeling</li>
+<li>Network simulations</li>
+<li>Network experimentation</li>
+<li>Network performance analysis</li>
+<li>Network measurement<h2 id="网络属性"><a href="#网络属性" class="headerlink" title="网络属性"></a>网络属性</h2></li>
+<li>Network security<ul>
+<li>Security protocols</li>
+<li>Web protocol security</li>
+<li>Mobile and wireless security</li>
+<li>Denial-of-service attacks</li>
+<li>Firewalls</li>
+</ul>
+</li>
+<li>Network range<ul>
+<li>Short-range networks</li>
+<li>Local area networks</li>
+<li>Metropolitan area networks</li>
+<li>Wide area networks</li>
+<li>Very long-range networks</li>
+</ul>
+</li>
+<li>Network structure<ul>
+<li>Topology analysis and generation</li>
+<li>Physical topologies</li>
+<li>Logical / virtual topologies</li>
+<li>Network topology types<ul>
+<li>Point-to-point networks</li>
+<li>Bus networks</li>
+<li>Star networks</li>
+<li>Ring networks<ul>
+<li>Token ring networks</li>
+<li>Fiber distributed data interface (FDDI)</li>
+</ul>
+</li>
+<li>Mesh networks<ul>
+<li>Wireless mesh networks</li>
+</ul>
+</li>
+<li>Hybrid networks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Network dynamics</li>
+<li>Network reliability<ul>
+<li>Error detection and error correction</li>
+</ul>
+</li>
+<li>Network mobility</li>
+<li>Network manageability</li>
+<li>Network privacy and anonymity<h2 id="网络服务"><a href="#网络服务" class="headerlink" title="网络服务"></a><a href="https://en.wikipedia.org/wiki/Network_service" target="_blank" rel="noopener">网络服务</a></h2></li>
+<li>Naming and addressing</li>
+<li>Cloud computing</li>
+<li>Location based services</li>
+<li>Programmable networks</li>
+<li>In-network processing</li>
+<li>Network management</li>
+<li>Network monitoring<h2 id="网络类型"><a href="#网络类型" class="headerlink" title="网络类型"></a>网络类型</h2></li>
+<li>Network on chip</li>
+<li>Home networks</li>
+<li>Storage area networks</li>
+<li>Data center networks</li>
+<li>Wired access networks</li>
+<li>Cyber-physical networks<ul>
+<li>Sensor networks</li>
+</ul>
+</li>
+<li>Mobile networks</li>
+<li>Overlay and other logical network structures<ul>
+<li>Peer-to-peer networks</li>
+<li>World Wide Web (network structure)</li>
+<li>Social media networks</li>
+<li>Online social networks</li>
+</ul>
+</li>
+<li>Wireless access networks<ul>
+<li>Wireless local area networks</li>
+<li>Wireless personal area networks</li>
+</ul>
+</li>
+<li>Ad hoc networks<ul>
+<li>Mobile ad hoc networks</li>
+</ul>
+</li>
+<li>Public Internet</li>
+<li>Packet-switching networks<h1 id="软件及其工程"><a href="#软件及其工程" class="headerlink" title="软件及其工程"></a>软件及其工程</h1><h2 id="软件组织和属性"><a href="#软件组织和属性" class="headerlink" title="软件组织和属性"></a>软件组织和属性</h2></li>
+<li>Contextual software domains<ul>
+<li>E-commerce infrastructure</li>
+<li>Software infrastructure<ul>
+<li>Interpreters</li>
+<li>Middleware<ul>
+<li>Message oriented middleware</li>
+<li>Reflective middleware</li>
+<li>Embedded middleware</li>
+</ul>
+</li>
+<li>Virtual machines</li>
+</ul>
+</li>
+<li>Operating systems<ul>
+<li>File systems management</li>
+<li>Memory management<ul>
+<li>Virtual memory</li>
+<li>Main memory</li>
+<li>Allocation / deallocation strategies</li>
+<li>Garbage collection</li>
+<li>Distributed memory</li>
+<li>Secondary storage</li>
+</ul>
+</li>
+<li>Process management<ul>
+<li>Scheduling</li>
+<li>Deadlocks</li>
+<li>Multithreading</li>
+<li>Multiprocessing / multiprogramming / multitasking</li>
+<li>Monitors</li>
+<li>Mutual exclusion</li>
+<li>Concurrency control</li>
+<li>Power management</li>
+<li>Process synchronization</li>
+</ul>
+</li>
+<li>Communications management<ul>
+<li>Buffering</li>
+<li>Input / output</li>
+<li>Message passing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Virtual worlds software<ul>
+<li>Interactive games</li>
+<li>Virtual worlds training simulations</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Software system structures<ul>
+<li>Embedded software</li>
+<li>Software architectures<ul>
+<li>n-tier architectures</li>
+<li>Peer-to-peer architectures</li>
+<li>Data flow architectures</li>
+<li>Cooperating communicating processes</li>
+<li>Layered systems</li>
+<li>Publish-subscribe / event-based architectures</li>
+<li>Electronic blackboards</li>
+<li>Simulator / interpreter</li>
+<li>Object oriented architectures</li>
+<li>Tightly coupled architectures</li>
+<li>Space-based architectures</li>
+<li>3-tier architectures</li>
+</ul>
+</li>
+<li>Software system models<ul>
+<li>Petri nets</li>
+<li>State systems</li>
+<li>Entity relationship modeling</li>
+<li>Model-driven software engineering</li>
+<li>Feature interaction</li>
+<li>Massively parallel systems</li>
+</ul>
+</li>
+<li>Ultra-large-scale systems</li>
+<li>Distributed systems organizing principles<ul>
+<li>Cloud computing</li>
+<li>Client-server architectures</li>
+<li>Grid computing</li>
+<li>Organizing principles for web applications</li>
+</ul>
+</li>
+<li>Real-time systems software</li>
+<li>Abstraction, modeling and modularity</li>
+</ul>
+</li>
+<li>Software functional properties<ul>
+<li>Correctness<ul>
+<li>Synchronization</li>
+<li>Functionality</li>
+<li>Real-time schedulability</li>
+<li>Consistency</li>
+<li>Completeness</li>
+<li>Access protection</li>
+</ul>
+</li>
+<li>Formal methods<ul>
+<li>Model checking</li>
+<li>Software verification</li>
+<li>Automated static analysis</li>
+<li>Dynamic analysis</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extra-functional properties<ul>
+<li>Interoperability</li>
+<li>Software performance</li>
+<li>Software reliability</li>
+<li>Software fault tolerance<ul>
+<li>Checkpoint / restart</li>
+</ul>
+</li>
+<li>Software safety</li>
+<li>Software usability<h2 id="软件表示法及工具"><a href="#软件表示法及工具" class="headerlink" title="软件表示法及工具"></a>软件表示法及工具</h2></li>
+</ul>
+</li>
+<li>General programming languages<ul>
+<li>Language types<ul>
+<li>Parallel programming languages</li>
+<li>Distributed programming languages</li>
+<li>Imperative languages</li>
+<li>Object oriented languages</li>
+<li>Functional languages</li>
+<li>Concurrent programming languages</li>
+<li>Constraint and logic languages</li>
+<li>Data flow languages</li>
+<li>Extensible languages</li>
+<li>Assembly languages</li>
+<li>Multiparadigm languages</li>
+<li>Very high level languages</li>
+</ul>
+</li>
+<li>Language features<ul>
+<li>Abstract data types</li>
+<li>Polymorphism</li>
+<li>Inheritance</li>
+<li>Control structures</li>
+<li>Data types and structures</li>
+<li>Classes and objects</li>
+<li>Modules / packages</li>
+<li>Constraints</li>
+<li>Recursion</li>
+<li>Concurrent programming structures</li>
+<li>Procedures, functions and subroutines</li>
+<li>Patterns</li>
+<li>Coroutines</li>
+<li>Frameworks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Formal language definitions<ul>
+<li>Syntax</li>
+<li>Semantics</li>
+</ul>
+</li>
+<li>Compilers<ul>
+<li>Interpreters</li>
+<li>Incremental compilers</li>
+<li>Retargetable compilers</li>
+<li>Just-in-time compilers</li>
+<li>Dynamic compilers</li>
+<li>Translator writing systems and compiler generators</li>
+<li>Source code generation</li>
+<li>Runtime environments</li>
+<li>Preprocessors</li>
+<li>Parsers</li>
+</ul>
+</li>
+<li>Context specific languages<ul>
+<li>Markup languages<ul>
+<li>Extensible Markup Language (XML)</li>
+<li>Hypertext languages</li>
+</ul>
+</li>
+<li>Scripting languages</li>
+<li>Domain specific languages</li>
+<li>Specialized application languages</li>
+<li>API languages</li>
+<li>Graphical user interface languages</li>
+<li>Window managers</li>
+<li>Command and control languages</li>
+<li>Macro languages</li>
+<li>Programming by example</li>
+<li>State based definitions</li>
+<li>Visual languages</li>
+<li>Interface definition languages</li>
+</ul>
+</li>
+<li>System description languages<ul>
+<li>Design languages</li>
+<li>Unified Modeling Language (UML)</li>
+<li>Architecture description languages</li>
+<li>System modeling languages</li>
+<li>Orchestration languages</li>
+<li>Integration frameworks</li>
+<li>Specification languages</li>
+</ul>
+</li>
+<li>Development frameworks and environments<ul>
+<li>Object oriented frameworks</li>
+<li>Software as a service orchestration system</li>
+<li>Integrated and visual development environments</li>
+<li>Application specific development environments</li>
+</ul>
+</li>
+<li>Software configuration management and version control systems</li>
+<li>Software libraries and repositories</li>
+<li>Software maintenance tools<h2 id="软件创建及管理"><a href="#软件创建及管理" class="headerlink" title="软件创建及管理"></a>软件创建及管理</h2></li>
+<li>Designing software<ul>
+<li>Requirements analysis</li>
+<li>Software design engineering</li>
+<li>Software design tradeoffs</li>
+<li>Software implementation planning<ul>
+<li>Software design techniques</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Software development process management<ul>
+<li>Software development methods<ul>
+<li>Rapid application development</li>
+<li>Agile software development</li>
+<li>Capability Maturity Model</li>
+<li>Waterfall model</li>
+<li>Spiral model</li>
+<li>V-model</li>
+<li>Design patterns</li>
+</ul>
+</li>
+<li>Risk management</li>
+</ul>
+</li>
+<li>Software development techniques<ul>
+<li>Software prototyping</li>
+<li>Object oriented development</li>
+<li>Flowcharts</li>
+<li>Reusability<ul>
+<li>Software product lines</li>
+</ul>
+</li>
+<li>Error handling and recovery</li>
+<li>Automatic programming<ul>
+<li>Genetic programming</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Software verification and validation<ul>
+<li>Software prototyping</li>
+<li>Operational analysis</li>
+<li>Software defect analysis<ul>
+<li>Software testing and debugging</li>
+</ul>
+</li>
+<li>Fault tree analysis</li>
+<li>Process validation<ul>
+<li>Walkthroughs</li>
+<li>Pair programming</li>
+<li>Use cases</li>
+<li>Acceptance testing</li>
+<li>Traceability</li>
+</ul>
+</li>
+<li>Formal software verification</li>
+<li>Empirical software validation</li>
+</ul>
+</li>
+<li>Software post-development issues<ul>
+<li>Software reverse engineering</li>
+<li>Documentation</li>
+<li>Backup procedures</li>
+<li>Software evolution</li>
+<li>Software version control</li>
+<li>Maintaining software</li>
+<li>System administration</li>
+</ul>
+</li>
+<li>Collaboration in software development<ul>
+<li>Open source model</li>
+<li>Programming teams</li>
+</ul>
+</li>
+<li>Search-based software engineering<h1 id="计算理论"><a href="#计算理论" class="headerlink" title="计算理论"></a><a href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">计算理论</a></h1><h2 id="计算模型"><a href="#计算模型" class="headerlink" title="计算模型"></a><a href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener">计算模型</a></h2></li>
+<li>Computability<ul>
+<li>Lambda calculus</li>
+<li>Turing machines</li>
+<li>Recursive functions</li>
+</ul>
+</li>
+<li>Probabilistic computation</li>
+<li>Quantum computation theory<ul>
+<li>Quantum complexity theory</li>
+<li>Quantum communication complexity</li>
+<li>Quantum query complexity</li>
+<li>Quantum information theory</li>
+</ul>
+</li>
+<li>Interactive computation</li>
+<li>Streaming models</li>
+<li>Concurrency<ul>
+<li>Parallel computing models</li>
+<li>Distributed computing models</li>
+<li>Process calculi</li>
+</ul>
+</li>
+<li>Timed and hybrid models</li>
+<li>Abstract machines<h2 id="形式语言及自动机理论"><a href="#形式语言及自动机理论" class="headerlink" title="形式语言及自动机理论"></a>形式语言及自动机理论</h2></li>
+<li>Formalisms<ul>
+<li>Algebraic language theory</li>
+<li>Rewrite systems</li>
+</ul>
+</li>
+<li>Automata over infinite objects</li>
+<li>Grammars and context-free languages</li>
+<li>Tree languages</li>
+<li>Automata extensions<ul>
+<li>Transducers</li>
+<li>Quantitative automata</li>
+</ul>
+</li>
+<li>Regular languages<h2 id="计算复杂度及密码学"><a href="#计算复杂度及密码学" class="headerlink" title="计算复杂度及密码学"></a>计算复杂度及密码学</h2></li>
+<li>Complexity classes</li>
+<li>Problems, reductions and completeness</li>
+<li>Communication complexity</li>
+<li>Circuit complexity</li>
+<li>Oracles and decision trees</li>
+<li>Algebraic complexity theory</li>
+<li>Quantum complexity theory</li>
+<li>Proof complexity</li>
+<li>Interactive proof systems</li>
+<li>Complexity theory and logic</li>
+<li>Cryptographic primitives</li>
+<li>Cryptographic protocols<h2 id="逻辑学"><a href="#逻辑学" class="headerlink" title="逻辑学"></a>逻辑学</h2></li>
+<li>Logic and verification</li>
+<li>Proof theory</li>
+<li>Modal and temporal logics</li>
+<li>Automated reasoning</li>
+<li>Constraint and logic programming</li>
+<li>Constructive mathematics</li>
+<li>Description logics</li>
+<li>Equational logic and rewriting</li>
+<li>Finite Model Theory</li>
+<li>Higher order logic</li>
+<li>Linear logic</li>
+<li>Programming logic</li>
+<li>Abstraction</li>
+<li>Verification by model checking</li>
+<li>Type theory</li>
+<li>Hoare logic</li>
+<li>Separation logic<h2 id="算法设计与分析"><a href="#算法设计与分析" class="headerlink" title="算法设计与分析"></a>算法设计与分析</h2></li>
+<li>Graph algorithms analysis<ul>
+<li>Network flows</li>
+<li>Sparsification and spanners</li>
+<li>Shortest paths</li>
+<li>Dynamic graph algorithms</li>
+</ul>
+</li>
+<li>Approximation algorithms analysis<ul>
+<li>Scheduling algorithms</li>
+<li>Packing and covering problems</li>
+<li>Routing and network design problems</li>
+<li>Facility location and clustering</li>
+<li>Rounding techniques</li>
+<li>Stochastic approximation</li>
+<li>Numeric approximation algorithms</li>
+</ul>
+</li>
+<li>Mathematical optimization<ul>
+<li>Discrete optimization<ul>
+<li>Network optimization</li>
+<li>Optimization with randomized search heuristics<ul>
+<li>Simulated annealing</li>
+<li>Evolutionary algorithms</li>
+<li>Tabu search</li>
+<li>Randomized local search</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Continuous optimization<ul>
+<li>Linear programming</li>
+<li>Semidefinite programming</li>
+<li>Convex optimization</li>
+<li>Quasiconvex programming and unimodality</li>
+<li>Stochastic control and optimization</li>
+<li>Quadratic programming</li>
+<li>Nonconvex optimization</li>
+<li>Bio-inspired optimization</li>
+</ul>
+</li>
+<li>Mixed discrete-continuous optimization<ul>
+<li>Submodular optimization and polymatroids</li>
+<li>Integer programming</li>
+<li>Bio-inspired optimization</li>
+</ul>
+</li>
+<li>Non-parametric optimization<ul>
+<li>Genetic programming</li>
+<li>Developmental representations</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Data structures design and analysis<ul>
+<li>Data compression</li>
+<li>Pattern matching</li>
+<li>Sorting and searching</li>
+<li>Predecessor queries</li>
+<li>Cell probe models and lower bounds</li>
+</ul>
+</li>
+<li>Online algorithms<ul>
+<li>Online learning algorithms<ul>
+<li>Scheduling algorithms</li>
+</ul>
+</li>
+<li>Caching and paging algorithms</li>
+<li>K-server algorithms</li>
+<li>Adversary models</li>
+</ul>
+</li>
+<li>Parameterized complexity and exact algorithms<ul>
+<li>Fixed parameter tractability</li>
+<li>W hierarchy</li>
+</ul>
+</li>
+<li>Streaming, sublinear and near linear time algorithms<ul>
+<li>Bloom filters and hashing</li>
+<li>Sketching and sampling</li>
+<li>Lower bounds and information complexity</li>
+<li>Random order and robust communication complexity</li>
+<li>Nearest neighbor algorithms</li>
+</ul>
+</li>
+<li>Parallel algorithms<ul>
+<li>MapReduce algorithms</li>
+<li>Self-organization</li>
+<li>Shared memory algorithms</li>
+<li>Vector / streaming algorithms</li>
+<li>Massively parallel algorithms</li>
+</ul>
+</li>
+<li>Distributed algorithms<ul>
+<li>MapReduce algorithms</li>
+<li>Self-organization</li>
+</ul>
+</li>
+<li>Algorithm design techniques<ul>
+<li>Backtracking</li>
+<li>Branch-and-bound</li>
+<li>Divide and conquer</li>
+<li>Dynamic programming</li>
+<li>Preconditioning</li>
+</ul>
+</li>
+<li>Concurrent algorithms<h2 id="随机性、几何学和离散结构"><a href="#随机性、几何学和离散结构" class="headerlink" title="随机性、几何学和离散结构"></a>随机性、几何学和离散结构</h2></li>
+<li>Pseudorandomness and derandomization</li>
+<li>Computational geometry</li>
+<li>Generating random combinatorial structures</li>
+<li>Random walks and Markov chains</li>
+<li>Expander graphs and randomness extractors</li>
+<li>Error-correcting codes</li>
+<li>Random projections and metric embeddings</li>
+<li>Random network models</li>
+<li>Random search heuristics<h2 id="应用领域理论和算法"><a href="#应用领域理论和算法" class="headerlink" title="应用领域理论和算法"></a>应用领域理论和算法</h2></li>
+<li>Machine learning theory<ul>
+<li>Sample complexity and generalization bounds</li>
+<li>Boolean function learning</li>
+<li>Unsupervised learning and clustering</li>
+<li>Kernel methods<ul>
+<li>Support vector machines</li>
+<li>Gaussian processes</li>
+</ul>
+</li>
+<li>Boosting</li>
+<li>Bayesian analysis</li>
+<li>Inductive inference</li>
+<li>Online learning theory</li>
+<li>Multi-agent learning</li>
+<li>Models of learning</li>
+<li>Query learning</li>
+<li>Structured prediction</li>
+<li>Reinforcement learning<ul>
+<li>Sequential decision making</li>
+<li>Inverse reinforcement learning</li>
+<li>Apprenticeship learning</li>
+<li>Multi-agent reinforcement learning</li>
+<li>Adversarial learning</li>
+</ul>
+</li>
+<li>Active learning</li>
+<li>Semi-supervised learning</li>
+<li>Markov decision processes</li>
+<li>Regret bounds</li>
+</ul>
+</li>
+<li>Algorithmic game theory and mechanism design<ul>
+<li>Social networks</li>
+<li>Algorithmic game theory</li>
+<li>Algorithmic mechanism design</li>
+<li>Solution concepts in game theory</li>
+<li>Exact and approximate computation of equilibria</li>
+<li>Quality of equilibria</li>
+<li>Convergence and learning in games</li>
+<li>Market equilibria</li>
+<li>Computational pricing and auctions</li>
+<li>Representations of games and their complexity</li>
+<li>Network games</li>
+<li>Network formation</li>
+<li>Computational advertising theory</li>
+</ul>
+</li>
+<li>Database theory<ul>
+<li>Data exchange</li>
+<li>Data provenance</li>
+<li>Data modeling</li>
+<li>Database query languages (principles)</li>
+<li>Database constraints theory</li>
+<li>Database interoperability</li>
+<li>Data structures and algorithms for data management</li>
+<li>Database query processing and optimization (theory)</li>
+<li>Data integration</li>
+<li>Logic and databases</li>
+<li>Theory of database privacy and security</li>
+<li>Incomplete, inconsistent, and uncertain databases</li>
+</ul>
+</li>
+<li>Theory of randomized search heuristics<h2 id="语义及推理"><a href="#语义及推理" class="headerlink" title="语义及推理"></a>语义及推理</h2></li>
+<li>Program constructs<ul>
+<li>Control primitives</li>
+<li>Functional constructs</li>
+<li>Object oriented constructs</li>
+<li>Program schemes</li>
+<li>Type structures</li>
+</ul>
+</li>
+<li>Program semantics<ul>
+<li>Algebraic semantics</li>
+<li>Denotational semantics</li>
+<li>Operational semantics</li>
+<li>Axiomatic semantics</li>
+<li>Action semantics</li>
+<li>Categorical semantics</li>
+</ul>
+</li>
+<li>Program reasoning<ul>
+<li>Invariants</li>
+<li>Program specifications</li>
+<li>Pre- and post-conditions</li>
+<li>Program verification</li>
+<li>Program analysis</li>
+<li>Assertions</li>
+<li>Parsing</li>
+<li>Abstraction<h1 id="计算机数学"><a href="#计算机数学" class="headerlink" title="计算机数学"></a>计算机数学</h1><h2 id="离散数学"><a href="#离散数学" class="headerlink" title="离散数学"></a><a href="https://zh.wikipedia.org/zh-cn/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6" target="_blank" rel="noopener">离散数学</a></h2></li>
+</ul>
+</li>
+<li>Combinatorics</li>
+<li>Combinatoric problems</li>
+<li>Permutations and combinations</li>
+<li>Combinatorial algorithms</li>
+<li>Generating functions</li>
+<li>Combinatorial optimization</li>
+<li>Combinatorics on words</li>
+<li>Enumeration</li>
+<li>Graph theory</li>
+<li>Trees</li>
+<li>Hypergraphs</li>
+<li>Random graphs</li>
+<li>Graph coloring</li>
+<li>Paths and connectivity problems</li>
+<li>Graph enumeration</li>
+<li>Matchings and factors</li>
+<li>Graphs and surfaces</li>
+<li>Network flows</li>
+<li>Spectra of graphs</li>
+<li>Extremal graph theory</li>
+<li>Matroids and greedoids</li>
+<li>Graph algorithms</li>
+<li>Approximation algorithms<h2 id="概览论与统计学"><a href="#概览论与统计学" class="headerlink" title="概览论与统计学"></a>概览论与统计学</h2></li>
+<li>Probabilistic representations<ul>
+<li>Bayesian networks</li>
+<li>Markov networks</li>
+<li>Factor graphs</li>
+<li>Decision diagrams</li>
+<li>Equational models</li>
+<li>Causal networks</li>
+<li>Stochastic differential equations</li>
+<li>Nonparametric representations<ul>
+<li>Kernel density estimators</li>
+<li>Spline models</li>
+<li>Bayesian nonparametric models</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Probabilistic inference problems<ul>
+<li>Maximum likelihood estimation</li>
+<li>Bayesian computation</li>
+<li>Computing most probable explanation</li>
+<li>Hypothesis testing and confidence interval computation</li>
+<li>Density estimation<ul>
+<li>Quantile regression</li>
+</ul>
+</li>
+<li>Max marginal computation</li>
+</ul>
+</li>
+<li>Probabilistic reasoning algorithms<ul>
+<li>Variable elimination</li>
+<li>Loopy belief propagation</li>
+<li>Variational methods</li>
+<li>Expectation maximization</li>
+<li>Markov-chain Monte Carlo methods<ul>
+<li>Gibbs sampling</li>
+<li>Metropolis-Hastings algorithm</li>
+<li>Simulated annealing</li>
+<li>Markov-chain Monte Carlo convergence measures</li>
+</ul>
+</li>
+<li>Sequential Monte Carlo methods</li>
+<li>Kalman filters and hidden Markov models</li>
+<li>Resampling methods<ul>
+<li>Bootstrapping</li>
+<li>Jackknifing</li>
+</ul>
+</li>
+<li>Random number generation</li>
+</ul>
+</li>
+<li>Probabilistic algorithms</li>
+<li>Statistical paradigms<ul>
+<li>Queueing theory</li>
+<li>Contingency table analysis</li>
+<li>Regression analysis<ul>
+<li>Robust regression</li>
+</ul>
+</li>
+<li>Time series analysis</li>
+<li>Survival analysis</li>
+<li>Renewal theory</li>
+<li>Dimensionality reduction</li>
+<li>Cluster analysis</li>
+<li>Statistical graphics</li>
+<li>Exploratory data analysis</li>
+</ul>
+</li>
+<li>Stochastic processes<ul>
+<li>Markov processes</li>
+</ul>
+</li>
+<li>Nonparametric statistics</li>
+<li>Distribution functions</li>
+<li>Multivariate statistics<h2 id="数学软件"><a href="#数学软件" class="headerlink" title="数学软件"></a><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">数学软件</a></h2></li>
+<li>Solvers</li>
+<li>Statistical software</li>
+<li>Mathematical software performance<h2 id="信息论"><a href="#信息论" class="headerlink" title="信息论"></a><a href="https://zh.wikipedia.org/wiki/%E4%BF%A1%E6%81%AF%E8%AE%BA" target="_blank" rel="noopener">信息论</a></h2></li>
+<li>Coding theory<h2 id="数学分析"><a href="#数学分析" class="headerlink" title="数学分析"></a><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90" target="_blank" rel="noopener">数学分析</a></h2></li>
+<li>Numerical analysis<ul>
+<li>Computation of transforms</li>
+<li>Computations in finite fields</li>
+<li>Computations on matrices</li>
+<li>Computations on polynomials<ul>
+<li>Gr��bner bases and other special bases</li>
+</ul>
+</li>
+<li>Number-theoretic computations</li>
+<li>Interpolation</li>
+<li>Numerical differentiation</li>
+<li>Interval arithmetic</li>
+<li>Arbitrary-precision arithmetic</li>
+<li>Automatic differentiation</li>
+<li>Mesh generation</li>
+<li>Discretization</li>
+</ul>
+</li>
+<li>Mathematical optimization<ul>
+<li>Discrete optimization<ul>
+<li>Network optimization</li>
+<li>Optimization with randomized search heuristics<ul>
+<li>Simulated annealing</li>
+<li>Evolutionary algorithms</li>
+<li>Tabu search</li>
+<li>Randomized local search</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Continuous optimization<ul>
+<li>Linear programming</li>
+<li>Semidefinite programming</li>
+<li>Convex optimization</li>
+<li>Quasiconvex programming and unimodality</li>
+<li>Stochastic control and optimization</li>
+<li>Quadratic programming</li>
+<li>Nonconvex optimization</li>
+<li>Bio-inspired optimization</li>
+</ul>
+</li>
+<li>Mixed discrete-continuous optimization<ul>
+<li>Submodular optimization and polymatroids</li>
+<li>Integer programming</li>
+<li>Bio-inspired optimization</li>
+</ul>
+</li>
+<li>Non-parametric optimization<ul>
+<li>Genetic programming</li>
+<li>Developmental representations</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Differential equations<ul>
+<li>Ordinary differential equations</li>
+<li>Partial differential equations</li>
+<li>Differential algebraic equations</li>
+<li>Differential variational inequalities</li>
+</ul>
+</li>
+<li>Calculus<ul>
+<li>Lambda calculus</li>
+<li>Differential calculus</li>
+<li>Integral calculus</li>
+</ul>
+</li>
+<li>Functional analysis<ul>
+<li>Approximation</li>
+</ul>
+</li>
+<li>Integral equations</li>
+<li>Nonlinear equations</li>
+<li>Quadrature<h2 id="连续数学"><a href="#连续数学" class="headerlink" title="连续数学"></a>连续数学</h2></li>
+<li>Calculus<ul>
+<li>Lambda calculus</li>
+<li>Differential calculus</li>
+<li>Integral calculus</li>
+</ul>
+</li>
+<li>Topology<ul>
+<li>Point-set topology</li>
+<li>Algebraic topology</li>
+<li>Geometric topology</li>
+</ul>
+</li>
+<li>Continuous functions<h1 id="信息系统"><a href="#信息系统" class="headerlink" title="信息系统"></a>信息系统</h1><h2 id="数据管理系统"><a href="#数据管理系统" class="headerlink" title="数据管理系统"></a>数据管理系统</h2></li>
+<li>Database design and models<ul>
+<li>Relational database model</li>
+<li>Entity relationship models</li>
+<li>Graph-based database models<ul>
+<li>Hierarchical data models</li>
+<li>Network data models</li>
+</ul>
+</li>
+<li>Physical data models</li>
+<li>Data model extensions<ul>
+<li>Semi-structured data</li>
+<li>Data streams</li>
+<li>Data provenance</li>
+<li>Incomplete data</li>
+<li>Temporal data</li>
+<li>Uncertainty</li>
+<li>Inconsistent data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Data structures<ul>
+<li>Data access methods<ul>
+<li>Multidimensional range search</li>
+<li>Data scans</li>
+<li>Point lookups</li>
+<li>Unidimensional range search</li>
+<li>Proximity search</li>
+</ul>
+</li>
+<li>Data layout<ul>
+<li>Data compression</li>
+<li>Data encryption</li>
+<li>Record and block layout</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Database management system engines<ul>
+<li>DBMS engine architectures</li>
+<li>Database query processing<ul>
+<li>Query optimization</li>
+<li>Query operators</li>
+<li>Query planning</li>
+<li>Join algorithms</li>
+</ul>
+</li>
+<li>Database transaction processing<ul>
+<li>Data locking</li>
+<li>Transaction logging</li>
+<li>Database recovery</li>
+</ul>
+</li>
+<li>Record and buffer management</li>
+<li>Parallel and distributed DBMSs<ul>
+<li>Key-value stores</li>
+<li>MapReduce-based systems</li>
+<li>Relational parallel and distributed DBMSs</li>
+</ul>
+</li>
+<li>Triggers and rules</li>
+<li>Database views</li>
+<li>Integrity checking</li>
+<li>Distributed database transactions<ul>
+<li>Distributed data locking</li>
+<li>Deadlocks</li>
+<li>Distributed database recovery</li>
+</ul>
+</li>
+<li>Main memory engines</li>
+<li>Online analytical processing engines</li>
+<li>Stream management</li>
+</ul>
+</li>
+<li>Query languages<ul>
+<li>Relational database query languages<ul>
+<li>Structured Query Language</li>
+</ul>
+</li>
+<li>XML query languages<ul>
+<li>XPath</li>
+<li>XQuery</li>
+</ul>
+</li>
+<li>Query languages for non-relational engines<ul>
+<li>MapReduce languages</li>
+</ul>
+</li>
+<li>Call level interfaces</li>
+</ul>
+</li>
+<li>Database administration<ul>
+<li>Database utilities and tools</li>
+<li>Database performance evaluation</li>
+<li>Autonomous database administration</li>
+<li>Data dictionaries</li>
+</ul>
+</li>
+<li>Information integration<ul>
+<li>Deduplication</li>
+<li>Extraction, transformation and loading</li>
+<li>Data exchange</li>
+<li>Data cleaning</li>
+<li>Wrappers (data mining)</li>
+<li>Mediators and data integration</li>
+<li>Entity resolution</li>
+<li>Data warehouses</li>
+<li>Federated databases</li>
+</ul>
+</li>
+<li>Middleware for databases<ul>
+<li>Database web servers</li>
+<li>Application servers</li>
+<li>Object-relational mapping facilities</li>
+<li>Data federation tools</li>
+<li>Data replication tools</li>
+<li>Distributed transaction monitors</li>
+<li>Message queues</li>
+<li>Service buses</li>
+<li>Enterprise application integration tools</li>
+<li>Middleware business process managers<h2 id="数据存储系统"><a href="#数据存储系统" class="headerlink" title="数据存储系统"></a>数据存储系统</h2></li>
+</ul>
+</li>
+<li>Information storage technologies<ul>
+<li>Magnetic disks</li>
+<li>Magnetic tapes</li>
+<li>Optical / magneto-optical disks</li>
+<li>Storage class memory<ul>
+<li>Flash memory</li>
+<li>Phase change memory</li>
+</ul>
+</li>
+<li>Disk arrays</li>
+<li>Tape libraries</li>
+</ul>
+</li>
+<li>Record storage systems<ul>
+<li>Record storage alternatives<ul>
+<li>Heap (data structure)</li>
+<li>Hashed file organization</li>
+<li>Indexed file organization</li>
+<li>Linked lists</li>
+</ul>
+</li>
+<li>Directory structures<ul>
+<li>B-trees</li>
+<li>Vnodes</li>
+<li>Inodes</li>
+<li>Extent-based file structures</li>
+</ul>
+</li>
+<li>Block / page strategies<ul>
+<li>Slotted pages</li>
+<li>Intrapage space management</li>
+<li>Interpage free-space management</li>
+</ul>
+</li>
+<li>Record layout alternatives<ul>
+<li>Fixed length attributes</li>
+<li>Variable length attributes</li>
+<li>Null values in records</li>
+</ul>
+</li>
+<li>Relational storage<ul>
+<li>Horizontal partitioning</li>
+<li>Vertical partitioning</li>
+<li>Column based storage</li>
+<li>Hybrid storage layouts</li>
+<li>Compression strategies</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Storage replication<ul>
+<li>Mirroring</li>
+<li>RAID</li>
+<li>Point-in-time copies</li>
+<li>Remote replication</li>
+<li>Storage recovery strategies</li>
+</ul>
+</li>
+<li>Storage architectures<ul>
+<li>Cloud based storage</li>
+<li>Storage network architectures<ul>
+<li>Storage area networks</li>
+<li>Direct attached storage</li>
+<li>Network attached storage</li>
+</ul>
+</li>
+<li>Distributed storage</li>
+</ul>
+</li>
+<li>Storage management<ul>
+<li>Hierarchical storage management</li>
+<li>Storage virtualization</li>
+<li>Information lifecycle management</li>
+<li>Version management</li>
+<li>Storage power management</li>
+<li>Thin provisioning<h2 id="信息系统的应用"><a href="#信息系统的应用" class="headerlink" title="信息系统的应用"></a>信息系统的应用</h2></li>
+</ul>
+</li>
+<li>Enterprise information systems<ul>
+<li>Intranets</li>
+<li>Extranets</li>
+<li>Enterprise resource planning</li>
+<li>Enterprise applications</li>
+<li>Data centers</li>
+</ul>
+</li>
+<li>Collaborative and social computing systems and tools<ul>
+<li>Blogs</li>
+<li>Wikis</li>
+<li>Reputation systems</li>
+<li>Open source software</li>
+<li>Social networking sites</li>
+<li>Social tagging systems</li>
+<li>Synchronous editors</li>
+<li>Asynchronous editors</li>
+</ul>
+</li>
+<li>Spatial-temporal systems<ul>
+<li>Location based services</li>
+<li>Geographic information systems</li>
+<li>Sensor networks</li>
+<li>Data streaming</li>
+<li>Global positioning systems</li>
+</ul>
+</li>
+<li>Decision support systems<ul>
+<li>Data warehouses</li>
+<li>Expert systems</li>
+<li>Data analytics</li>
+<li>Online analytical processing</li>
+</ul>
+</li>
+<li>Mobile information processing systems</li>
+<li>Process control systems</li>
+<li>Multimedia information systems<ul>
+<li>Multimedia databases</li>
+<li>Multimedia streaming</li>
+<li>Multimedia content creation</li>
+<li>Massively multiplayer online games</li>
+</ul>
+</li>
+<li>Data mining<ul>
+<li>Data cleaning</li>
+<li>Collaborative filtering</li>
+<li>Association rules</li>
+<li>Clustering</li>
+<li>Nearest-neighbor search</li>
+<li>Data stream mining</li>
+</ul>
+</li>
+<li>Digital libraries and archives</li>
+<li>Computational advertising</li>
+<li>Computing platforms<h2 id="互联网"><a href="#互联网" class="headerlink" title="互联网"></a>互联网</h2></li>
+<li>Web searching and information discovery<ul>
+<li>Web search engines<ul>
+<li>Web crawling</li>
+<li>Web indexing</li>
+<li>Page and site ranking</li>
+<li>Spam detection</li>
+</ul>
+</li>
+<li>Content ranking</li>
+<li>Collaborative filtering</li>
+<li>Social recommendation</li>
+<li>Personalization</li>
+<li>Social tagging</li>
+</ul>
+</li>
+<li>Online advertising<ul>
+<li>Sponsored search advertising</li>
+<li>Content match advertising</li>
+<li>Display advertising</li>
+<li>Social advertising</li>
+</ul>
+</li>
+<li>Web mining<ul>
+<li>Site wrapping</li>
+<li>Data extraction and integration<ul>
+<li>Deep web</li>
+<li>Surfacing</li>
+<li>Search results deduplication</li>
+</ul>
+</li>
+<li>Web log analysis</li>
+<li>Traffic analysis</li>
+</ul>
+</li>
+<li>Web applications<ul>
+<li>Internet communications tools<ul>
+<li>Email</li>
+<li>Blogs</li>
+<li>Texting</li>
+<li>Chat</li>
+<li>Web conferencing</li>
+</ul>
+</li>
+<li>Social networks</li>
+<li>Crowdsourcing<ul>
+<li>Answer ranking</li>
+<li>Trust</li>
+<li>Incentive schemes</li>
+<li>Reputation systems</li>
+</ul>
+</li>
+<li>Electronic commerce<ul>
+<li>Digital cash</li>
+<li>E-commerce infrastructure</li>
+<li>Electronic data interchange</li>
+<li>Electronic funds transfer</li>
+<li>Online shopping</li>
+<li>Online banking</li>
+<li>Secure online transactions</li>
+<li>Online auctions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Web interfaces<ul>
+<li>Wikis</li>
+<li>Browsers</li>
+<li>Mashups</li>
+</ul>
+</li>
+<li>Web services<ul>
+<li>Simple Object Access Protocol (SOAP)</li>
+<li>RESTful web services</li>
+<li>Web Services Description Language (WSDL)</li>
+<li>Universal Description Discovery and Integration (UDDI)</li>
+<li>Service discovery and interfaces</li>
+</ul>
+</li>
+<li>Web data description languages<ul>
+<li>Semantic web description languages<ul>
+<li>Resource Description Framework (RDF)</li>
+<li>Web Ontology Language (OWL)</li>
+</ul>
+</li>
+<li>Markup languages<ul>
+<li>Extensible Markup Language (XML)</li>
+<li>Hypertext languages<h2 id="信息检索"><a href="#信息检索" class="headerlink" title="信息检索"></a>信息检索</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Document representation<ul>
+<li>Document structure</li>
+<li>Document topic models</li>
+<li>Content analysis and feature selection</li>
+<li>Data encoding and canonicalization</li>
+<li>Document collection models</li>
+<li>Ontologies</li>
+<li>Dictionaries</li>
+<li>Thesauri</li>
+</ul>
+</li>
+<li>Information retrieval query processing<ul>
+<li>Query representation</li>
+<li>Query intent</li>
+<li>Query log analysis</li>
+<li>Query suggestion</li>
+<li>Query reformulation</li>
+</ul>
+</li>
+<li>Users and interactive retrieval<ul>
+<li>Personalization</li>
+<li>Task models</li>
+<li>Search interfaces</li>
+<li>Collaborative search</li>
+</ul>
+</li>
+<li>Retrieval models and ranking<ul>
+<li>Rank aggregation</li>
+<li>Probabilistic retrieval models</li>
+<li>Language models</li>
+<li>Similarity measures</li>
+<li>Learning to rank</li>
+<li>Combination, fusion and federated search</li>
+<li>Information retrieval diversity</li>
+<li>Top-k retrieval in databases</li>
+<li>Novelty in information retrieval</li>
+</ul>
+</li>
+<li>Retrieval tasks and goals<ul>
+<li>Question answering</li>
+<li>Document filtering</li>
+<li>Recommender systems</li>
+<li>Information extraction</li>
+<li>Sentiment analysis</li>
+<li>Expert search</li>
+<li>Near-duplicate and plagiarism detection</li>
+<li>Clustering and classification</li>
+<li>Summarization</li>
+<li>Business intelligence</li>
+</ul>
+</li>
+<li>Evaluation of retrieval results<ul>
+<li>Test collections</li>
+<li>Relevance assessment</li>
+<li>Retrieval effectiveness</li>
+<li>Retrieval efficiency</li>
+<li>Presentation of retrieval results</li>
+</ul>
+</li>
+<li>Search engine architectures and scalability<ul>
+<li>Search engine indexing</li>
+<li>Search index compression</li>
+<li>Distributed retrieval</li>
+<li>Peer-to-peer retrieval</li>
+<li>Retrieval on mobile devices</li>
+<li>Adversarial retrieval</li>
+<li>Link and co-citation analysis</li>
+<li>Searching with auxiliary databases</li>
+</ul>
+</li>
+<li>Specialized information retrieval<ul>
+<li>Structure and multilingual text search<ul>
+<li>Structured text search</li>
+<li>Mathematics retrieval</li>
+<li>Chemical and biochemical retrieval</li>
+<li>Multilingual and cross-lingual retrieval</li>
+</ul>
+</li>
+<li>Multimedia and multimodal retrieval<ul>
+<li>Image search</li>
+<li>Video search</li>
+<li>Speech / audio search</li>
+<li>Music retrieval</li>
+</ul>
+</li>
+<li>Environment-specific retrieval<ul>
+<li>Enterprise search</li>
+<li>Desktop search</li>
+<li>Web and social media search<h1 id="安全与隐私"><a href="#安全与隐私" class="headerlink" title="安全与隐私"></a>安全与隐私</h1><h2 id="密码学"><a href="#密码学" class="headerlink" title="密码学"></a><a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6" target="_blank" rel="noopener">密码学</a></h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Key management</li>
+<li>Public key (asymmetric) techniques<ul>
+<li>Digital signatures</li>
+<li>Public key encryption</li>
+</ul>
+</li>
+<li>Symmetric cryptography and hash functions<ul>
+<li>Block and stream ciphers</li>
+<li>Hash functions and message authentication codes</li>
+</ul>
+</li>
+<li>Cryptanalysis and other attacks</li>
+<li>Information-theoretic techniques</li>
+<li>Mathematical foundations of cryptography<h2 id="安全的形式方法及理论"><a href="#安全的形式方法及理论" class="headerlink" title="安全的形式方法及理论"></a>安全的形式方法及理论</h2></li>
+<li>Trust frameworks</li>
+<li>Security requirements</li>
+<li>Formal security models</li>
+<li>Logic and verification<h2 id="安全服务"><a href="#安全服务" class="headerlink" title="安全服务"></a>安全服务</h2></li>
+<li>Authentication<ul>
+<li>Biometrics</li>
+<li>Graphical / visual passwords</li>
+<li>Multi-factor authentication</li>
+</ul>
+</li>
+<li>Access control</li>
+<li>Pseudonymity, anonymity and untraceability</li>
+<li>Privacy-preserving protocols</li>
+<li>Digital rights management</li>
+<li>Authorization<h2 id="入侵-异常检测与恶意软件拦截"><a href="#入侵-异常检测与恶意软件拦截" class="headerlink" title="入侵/异常检测与恶意软件拦截"></a>入侵/异常检测与恶意软件拦截</h2></li>
+<li>Malware and its mitigation</li>
+<li>Intrusion detection systems<ul>
+<li>Artificial immune systems</li>
+</ul>
+</li>
+<li>Social engineering attacks<ul>
+<li>Spoofing attacks</li>
+<li>Phishing<h2 id="硬件安全"><a href="#硬件安全" class="headerlink" title="硬件安全"></a>硬件安全</h2></li>
+</ul>
+</li>
+<li>Tamper-proof and tamper-resistant designs</li>
+<li>Embedded systems security</li>
+<li>Hardware security implementation<ul>
+<li>Hardware-based security protocols</li>
+</ul>
+</li>
+<li>Hardware attacks and countermeasures<ul>
+<li>Malicious design modifications</li>
+<li>Side-channel analysis and countermeasures</li>
+</ul>
+</li>
+<li>Hardware reverse engineering<h2 id="系统安全"><a href="#系统安全" class="headerlink" title="系统安全"></a>系统安全</h2></li>
+<li>Operating systems security<ul>
+<li>Mobile platform security</li>
+<li>Trusted computing</li>
+<li>Virtualization and security</li>
+</ul>
+</li>
+<li>Browser security</li>
+<li>Distributed systems security</li>
+<li>Information flow control</li>
+<li>Denial-of-service attacks</li>
+<li>Firewalls</li>
+<li>Vulnerability management<ul>
+<li>Penetration testing</li>
+<li>Vulnerability scanners</li>
+</ul>
+</li>
+<li>File system security<h2 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h2></li>
+<li>Security protocols</li>
+<li>Web protocol security</li>
+<li>Mobile and wireless security</li>
+<li>Denial-of-service attacks</li>
+<li>Firewalls<h2 id="数据库和存储安全"><a href="#数据库和存储安全" class="headerlink" title="数据库和存储安全"></a>数据库和存储安全</h2></li>
+<li>Data anonymization and sanitization</li>
+<li>Management and querying of encrypted data</li>
+<li>Information accountability and usage control</li>
+<li>Database activity monitoring<h2 id="软件和应用安全"><a href="#软件和应用安全" class="headerlink" title="软件和应用安全"></a>软件和应用安全</h2></li>
+<li>Software security engineering</li>
+<li>Web application security</li>
+<li>Social network security and privacy</li>
+<li>Domain-specific security and privacy architectures</li>
+<li>Software reverse engineering<h2 id="安全与隐私的人文与社会"><a href="#安全与隐私的人文与社会" class="headerlink" title="安全与隐私的人文与社会"></a>安全与隐私的人文与社会</h2></li>
+<li>Economics of security and privacy</li>
+<li>Social aspects of security and privacy</li>
+<li>Privacy protections</li>
+<li>Usability in security and privacy<h1 id="以人为本的计算机"><a href="#以人为本的计算机" class="headerlink" title="以人为本的计算机"></a>以人为本的计算机</h1><h2 id="人机交互"><a href="#人机交互" class="headerlink" title="人机交互"></a>人机交互</h2></li>
+<li>HCI design and evaluation methods<ul>
+<li>User models</li>
+<li>User studies</li>
+<li>Usability testing</li>
+<li>Heuristic evaluations</li>
+<li>Walkthrough evaluations</li>
+<li>Laboratory experiments</li>
+<li>Field studies</li>
+</ul>
+</li>
+<li>Interaction paradigms<ul>
+<li>Hypertext / hypermedia</li>
+<li>Mixed / augmented reality</li>
+<li>Command line interfaces</li>
+<li>Graphical user interfaces</li>
+<li>Virtual reality</li>
+<li>Web-based interaction</li>
+<li>Natural language interfaces</li>
+<li>Collaborative interaction</li>
+</ul>
+</li>
+<li>Interaction devices<ul>
+<li>Graphics input devices</li>
+<li>Displays and imagers</li>
+<li>Sound-based input / output</li>
+<li>Keyboards</li>
+<li>Pointing devices</li>
+<li>Touch screens</li>
+<li>Haptic devices</li>
+</ul>
+</li>
+<li>HCI theory, concepts and models</li>
+<li>Interaction techniques<ul>
+<li>Auditory feedback</li>
+<li>Text input</li>
+<li>Pointing</li>
+<li>Gestural input</li>
+</ul>
+</li>
+<li>Interactive systems and tools<ul>
+<li>User interface management systems</li>
+<li>User interface programming</li>
+<li>User interface toolkits</li>
+</ul>
+</li>
+<li>Empirical studies in HCI<h2 id="交互设计"><a href="#交互设计" class="headerlink" title="交互设计"></a>交互设计</h2></li>
+<li>Interaction design process and methods<ul>
+<li>User interface design</li>
+<li>User centered design</li>
+<li>Activity centered design</li>
+<li>Scenario-based design</li>
+<li>Participatory design</li>
+<li>Contextual design</li>
+<li>Interface design prototyping</li>
+</ul>
+</li>
+<li>Interaction design theory, concepts and paradigms</li>
+<li>Empirical studies in interaction design</li>
+<li>Systems and tools for interaction design<ul>
+<li>Wireframes<h2 id="协作及社交计算"><a href="#协作及社交计算" class="headerlink" title="协作及社交计算"></a>协作及社交计算</h2></li>
+</ul>
+</li>
+<li>Collaborative and social computing theory, concepts and paradigms<ul>
+<li>Social content sharing</li>
+<li>Collaborative content creation</li>
+<li>Collaborative filtering</li>
+<li>Social recommendation</li>
+<li>Social networks</li>
+<li>Social tagging</li>
+<li>Computer supported cooperative work</li>
+<li>Social engineering (social sciences)</li>
+<li>Social navigation</li>
+<li>Social media</li>
+</ul>
+</li>
+<li>Collaborative and social computing design and evaluation methods<ul>
+<li>Social network analysis</li>
+<li>Ethnographic studies</li>
+</ul>
+</li>
+<li>Collaborative and social computing systems and tools<ul>
+<li>Blogs</li>
+<li>Wikis</li>
+<li>Reputation systems</li>
+<li>Open source software</li>
+<li>Social networking sites</li>
+<li>Social tagging systems</li>
+<li>Synchronous editors</li>
+<li>Asynchronous editors</li>
+</ul>
+</li>
+<li>Empirical studies in collaborative and social computing</li>
+<li>Collaborative and social computing devices<h2 id="普适计算"><a href="#普适计算" class="headerlink" title="普适计算"></a><a href="https://zh.wikipedia.org/wiki/%E6%99%AE%E9%80%82%E8%AE%A1%E7%AE%97" target="_blank" rel="noopener">普适计算</a></h2></li>
+<li>Ubiquitous and mobile computing theory, concepts and paradigms<ul>
+<li>Ubiquitous computing</li>
+<li>Mobile computing</li>
+<li>Ambient intelligence</li>
+</ul>
+</li>
+<li>Ubiquitous and mobile computing systems and tools</li>
+<li>Ubiquitous and mobile devices<ul>
+<li>Smartphones</li>
+<li>Interactive whiteboards</li>
+<li>Mobile phones</li>
+<li>Mobile devices</li>
+<li>Portable media players</li>
+<li>Personal digital assistants</li>
+<li>Handheld game consoles</li>
+<li>E-book readers</li>
+<li>Tablet computers</li>
+</ul>
+</li>
+<li>Ubiquitous and mobile computing design and evaluation methods</li>
+<li>Empirical studies in ubiquitous and mobile computing<h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2></li>
+<li>Visualization techniques<ul>
+<li>Treemaps</li>
+<li>Hyperbolic trees</li>
+<li>Heat maps</li>
+<li>Graph drawings</li>
+<li>Dendrograms</li>
+<li>Cladograms</li>
+</ul>
+</li>
+<li>Visualization application domains<ul>
+<li>Scientific visualization</li>
+<li>Visual analytics</li>
+<li>Geographic visualization</li>
+<li>Information visualization</li>
+</ul>
+</li>
+<li>Visualization systems and tools<ul>
+<li>Visualization toolkits</li>
+</ul>
+</li>
+<li>Visualization theory, concepts and paradigms</li>
+<li>Empirical studies in visualization</li>
+<li>Visualization design and evaluation methods<h2 id="辅助功能"><a href="#辅助功能" class="headerlink" title="辅助功能"></a>辅助功能</h2></li>
+<li>Accessibility theory, concepts and paradigms</li>
+<li>Empirical studies in accessibility</li>
+<li>Accessibility design and evaluation methods</li>
+<li>Accessibility technologies</li>
+<li>Accessibility systems and tools<h1 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h1><h2 id="符号和代数运算"><a href="#符号和代数运算" class="headerlink" title="符号和代数运算"></a>符号和代数运算</h2></li>
+<li>Symbolic and algebraic algorithms<ul>
+<li>Combinatorial algorithms</li>
+<li>Algebraic algorithms</li>
+<li>Nonalgebraic algorithms</li>
+<li>Symbolic calculus algorithms</li>
+<li>Exact arithmetic algorithms</li>
+<li>Hybrid symbolic-numeric methods</li>
+<li>Discrete calculus algorithms</li>
+<li>Number theory algorithms</li>
+<li>Equation and inequality solving algorithms</li>
+<li>Linear algebra algorithms</li>
+<li>Theorem proving algorithms</li>
+<li>Boolean algebra algorithms</li>
+<li>Optimization algorithms</li>
+</ul>
+</li>
+<li>Computer algebra systems<ul>
+<li>Special-purpose algebraic systems</li>
+</ul>
+</li>
+<li>Representation of mathematical objects<ul>
+<li>Representation of exact numbers</li>
+<li>Representation of mathematical functions</li>
+<li>Representation of Boolean functions</li>
+<li>Representation of polynomials<h2 id="并行计算方法"><a href="#并行计算方法" class="headerlink" title="并行计算方法"></a><a href="https://zh.wikipedia.org/wiki/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97" target="_blank" rel="noopener">并行计算方法</a></h2></li>
+</ul>
+</li>
+<li>Parallel algorithms<ul>
+<li>MapReduce algorithms</li>
+<li>Self-organization</li>
+<li>Shared memory algorithms</li>
+<li>Vector / streaming algorithms</li>
+<li>Massively parallel algorithms</li>
+</ul>
+</li>
+<li>Parallel programming languages<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2></li>
+<li>Natural language processing<ul>
+<li>Information extraction</li>
+<li>Machine translation</li>
+<li>Discourse, dialogue and pragmatics</li>
+<li>Natural language generation</li>
+<li>Speech recognition</li>
+<li>Lexical semantics</li>
+<li>Phonology / morphology</li>
+<li>Language resources</li>
+</ul>
+</li>
+<li>Knowledge representation and reasoning<ul>
+<li>Description logics</li>
+<li>Semantic networks</li>
+<li>Nonmonotonic, default reasoning and belief revision</li>
+<li>Probabilistic reasoning</li>
+<li>Vagueness and fuzzy logic</li>
+<li>Causal reasoning and diagnostics</li>
+<li>Temporal reasoning</li>
+<li>Cognitive robotics</li>
+<li>Ontology engineering</li>
+<li>Logic programming and answer set programming</li>
+<li>Spatial and physical reasoning</li>
+<li>Reasoning about belief and knowledge</li>
+</ul>
+</li>
+<li>Planning and scheduling<ul>
+<li>Planning for deterministic actions</li>
+<li>Planning under uncertainty</li>
+<li>Multi-agent planning</li>
+<li>Planning with abstraction and generalization</li>
+<li>Robotic planning<ul>
+<li>Evolutionary robotics</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Search methodologies<ul>
+<li>Heuristic function construction</li>
+<li>Discrete space search</li>
+<li>Continuous space search</li>
+<li>Randomized search</li>
+<li>Game tree search</li>
+<li>Abstraction and micro-operators</li>
+<li>Search with partial observations</li>
+</ul>
+</li>
+<li>Control methods<ul>
+<li>Robotic planning<ul>
+<li>Evolutionary robotics</li>
+</ul>
+</li>
+<li>Computational control theory</li>
+<li>Motion path planning</li>
+</ul>
+</li>
+<li>Philosophical/theoretical foundations of artificial intelligence<ul>
+<li>Cognitive science</li>
+<li>Theory of mind</li>
+</ul>
+</li>
+<li>Distributed artificial intelligence<ul>
+<li>Multi-agent systems</li>
+<li>Intelligent agents</li>
+<li>Mobile agents</li>
+<li>Cooperation and coordination</li>
+</ul>
+</li>
+<li>Computer vision<ul>
+<li>Computer vision tasks<ul>
+<li>Biometrics</li>
+<li>Scene understanding</li>
+<li>Activity recognition and understanding</li>
+<li>Video summarization</li>
+<li>Visual content-based indexing and retrieval</li>
+<li>Visual inspection</li>
+<li>Vision for robotics</li>
+<li>Scene anomaly detection</li>
+</ul>
+</li>
+<li>Image and video acquisition<ul>
+<li>Camera calibration</li>
+<li>Epipolar geometry</li>
+<li>Computational photography</li>
+<li>Hyperspectral imaging</li>
+<li>Motion capture</li>
+<li>3D imaging</li>
+<li>Active vision</li>
+</ul>
+</li>
+<li>Computer vision representations<ul>
+<li>Image representations</li>
+<li>Shape representations</li>
+<li>Appearance and texture representations</li>
+<li>Hierarchical representations</li>
+</ul>
+</li>
+<li>Computer vision problems<ul>
+<li>Interest point and salient region detections</li>
+<li>Image segmentation</li>
+<li>Video segmentation</li>
+<li>Shape inference</li>
+<li>Object detection</li>
+<li>Object recognition</li>
+<li>Object identification</li>
+<li>Tracking</li>
+<li>Reconstruction</li>
+<li>Matching<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2></li>
+</ul>
+</li>
+<li>Learning paradigms<ul>
+<li>Supervised learning<ul>
+<li>Ranking</li>
+<li>Learning to rank</li>
+<li>Supervised learning by classification</li>
+<li>Supervised learning by regression</li>
+<li>Structured outputs</li>
+<li>Cost-sensitive learning</li>
+</ul>
+</li>
+<li>Unsupervised learning<ul>
+<li>Cluster analysis</li>
+<li>Anomaly detection</li>
+<li>Mixture modeling</li>
+<li>Topic modeling</li>
+<li>Source separation</li>
+<li>Motif discovery</li>
+<li>Dimensionality reduction and manifold learning</li>
+</ul>
+</li>
+<li>Reinforcement learning<ul>
+<li>Sequential decision making</li>
+<li>Inverse reinforcement learning</li>
+<li>Apprenticeship learning</li>
+<li>Multi-agent reinforcement learning</li>
+<li>Adversarial learning</li>
+</ul>
+</li>
+<li>Multi-task learning<ul>
+<li>Transfer learning</li>
+<li>Lifelong machine learning</li>
+<li>Learning under covariate shift</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learning settings<ul>
+<li>Batch learning</li>
+<li>Online learning settings</li>
+<li>Learning from demonstrations</li>
+<li>Learning from critiques</li>
+<li>Learning from implicit feedback</li>
+<li>Active learning settings</li>
+<li>Semi-supervised learning settings</li>
+</ul>
+</li>
+<li>Machine learning approaches<ul>
+<li>Classification and regression trees</li>
+<li>Kernel methods<ul>
+<li>Support vector machines</li>
+<li>Gaussian processes</li>
+</ul>
+</li>
+<li>Neural networks</li>
+<li>Logical and relational learning<ul>
+<li>Inductive logic learning</li>
+<li>Statistical relational learning</li>
+</ul>
+</li>
+<li>Learning in probabilistic graphical models<ul>
+<li>Maximum likelihood modeling</li>
+<li>Maximum entropy modeling</li>
+<li>Maximum a posteriori modeling</li>
+<li>Mixture models</li>
+<li>Latent variable models</li>
+<li>Bayesian network models</li>
+</ul>
+</li>
+<li>Learning linear models<ul>
+<li>Perceptron algorithm</li>
+</ul>
+</li>
+<li>Factorization methods<ul>
+<li>Non-negative matrix factorization</li>
+<li>Factor analysis</li>
+<li>Principal component analysis</li>
+<li>Canonical correlation analysis</li>
+<li>Latent Dirichlet allocation</li>
+</ul>
+</li>
+<li>Rule learning</li>
+<li>Instance-based learning</li>
+<li>Markov decision processes</li>
+<li>Partially-observable Markov decision processes</li>
+<li>Stochastic games</li>
+<li>Learning latent representations<ul>
+<li>Deep belief networks</li>
+</ul>
+</li>
+<li>Bio-inspired approaches<ul>
+<li>Artificial life</li>
+<li>Evolvable hardware</li>
+<li>Genetic algorithms</li>
+<li>Genetic programming</li>
+<li>Evolutionary robotics</li>
+<li>Generative and developmental approaches</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Machine learning algorithms<ul>
+<li>Dynamic programming for Markov decision processes<ul>
+<li>Value iteration</li>
+<li>Q-learning</li>
+<li>Policy iteration</li>
+<li>Temporal difference learning</li>
+<li>Approximate dynamic programming methods</li>
+</ul>
+</li>
+<li>Ensemble methods<ul>
+<li>Boosting</li>
+<li>Bagging</li>
+</ul>
+</li>
+<li>Spectral methods</li>
+<li>Feature selection</li>
+<li>Regularization</li>
+</ul>
+</li>
+<li>Cross-validation<h2 id="建模与模拟"><a href="#建模与模拟" class="headerlink" title="建模与模拟"></a>建模与模拟</h2></li>
+<li>Model development and analysis<ul>
+<li>Modeling methodologies</li>
+<li>Model verification and validation</li>
+<li>Uncertainty quantification</li>
+</ul>
+</li>
+<li>Simulation theory<ul>
+<li>Systems theory</li>
+<li>Network science</li>
+</ul>
+</li>
+<li>Simulation types and techniques<ul>
+<li>Uncertainty quantification</li>
+<li>Quantum mechanic simulation</li>
+<li>Molecular simulation</li>
+<li>Rare-event simulation</li>
+<li>Discrete-event simulation</li>
+<li>Agent / discrete models</li>
+<li>Distributed simulation</li>
+<li>Continuous simulation</li>
+<li>Continuous models</li>
+<li>Real-time simulation</li>
+<li>Interactive simulation</li>
+<li>Multiscale systems</li>
+<li>Massively parallel and high-performance simulations</li>
+<li>Data assimilation</li>
+<li>Scientific visualization</li>
+<li>Visual analytics</li>
+<li>Simulation by animation</li>
+<li>Artificial life</li>
+</ul>
+</li>
+<li>Simulation support systems<ul>
+<li>Simulation environments</li>
+<li>Simulation languages</li>
+<li>Simulation tools</li>
+</ul>
+</li>
+<li>Simulation evaluation<h2 id="计算机图形"><a href="#计算机图形" class="headerlink" title="计算机图形"></a>计算机图形</h2></li>
+<li>Animation<ul>
+<li>Motion capture</li>
+<li>Procedural animation</li>
+<li>Physical simulation</li>
+<li>Motion processing</li>
+<li>Collision detection</li>
+</ul>
+</li>
+<li>Rendering<ul>
+<li>Rasterization</li>
+<li>Ray tracing</li>
+<li>Non-photorealistic rendering</li>
+<li>Reflectance modeling</li>
+<li>Visibility</li>
+</ul>
+</li>
+<li>Image manipulation<ul>
+<li>Computational photography</li>
+<li>Image processing</li>
+<li>Texturing</li>
+<li>Image-based rendering</li>
+<li>Antialiasing</li>
+</ul>
+</li>
+<li>Graphics systems and interfaces<ul>
+<li>Graphics processors</li>
+<li>Graphics input devices</li>
+<li>Mixed / augmented reality</li>
+<li>Perception</li>
+<li>Graphics file formats</li>
+<li>Virtual reality</li>
+</ul>
+</li>
+<li>Image compression</li>
+<li>Shape modeling<ul>
+<li>Mesh models</li>
+<li>Mesh geometry models</li>
+<li>Parametric curve and surface models</li>
+<li>Point-based models</li>
+<li>Volumetric models</li>
+<li>Shape analysis<h2 id="分布式计算方法"><a href="#分布式计算方法" class="headerlink" title="分布式计算方法"></a>分布式计算方法</h2></li>
+</ul>
+</li>
+<li>Distributed algorithms<ul>
+<li>MapReduce algorithms</li>
+<li>Self-organization</li>
+</ul>
+</li>
+<li>Distributed programming languages<h2 id="并发计算方法"><a href="#并发计算方法" class="headerlink" title="并发计算方法"></a>并发计算方法</h2></li>
+<li>Concurrent programming languages</li>
+<li>Concurrent algorithms<h1 id="应用计算"><a href="#应用计算" class="headerlink" title="应用计算"></a>应用计算</h1><h2 id="电子商务"><a href="#电子商务" class="headerlink" title="电子商务"></a><a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1" target="_blank" rel="noopener">电子商务</a></h2></li>
+<li>Digital cash</li>
+<li>E-commerce infrastructure</li>
+<li>Electronic data interchange</li>
+<li>Electronic funds transfer</li>
+<li>Online shopping</li>
+<li>Online banking</li>
+<li>Secure online transactions</li>
+<li>Online auctions<h2 id="企业计算"><a href="#企业计算" class="headerlink" title="企业计算"></a>企业计算</h2></li>
+<li>Enterprise information systems<ul>
+<li>Intranets</li>
+<li>Extranets</li>
+<li>Enterprise resource planning</li>
+<li>Enterprise applications</li>
+<li>Data centers</li>
+</ul>
+</li>
+<li>Business process management<ul>
+<li>Business process modeling</li>
+<li>Business process management systems</li>
+<li>Business process monitoring</li>
+<li>Cross-organizational business processes</li>
+<li>Business intelligence</li>
+</ul>
+</li>
+<li>Enterprise architectures<ul>
+<li>Enterprise architecture management</li>
+<li>Enterprise architecture frameworks</li>
+<li>Enterprise architecture modeling</li>
+</ul>
+</li>
+<li>Service-oriented architectures</li>
+<li>Event-driven architectures</li>
+<li>Business rules</li>
+<li>Enterprise modeling</li>
+<li>Enterprise ontologies, taxonomies and vocabularies</li>
+<li>Enterprise data management</li>
+<li>Reference models</li>
+<li>Business-IT alignment</li>
+<li>IT architectures</li>
+<li>IT governance</li>
+<li>Enterprise computing infrastructures</li>
+<li>Enterprise interoperability<ul>
+<li>Enterprise application integration</li>
+<li>Information integration and interoperability<h2 id="物理科学与工程"><a href="#物理科学与工程" class="headerlink" title="物理科学与工程"></a>物理科学与工程</h2></li>
+</ul>
+</li>
+<li>Aerospace<ul>
+<li>Avionics</li>
+</ul>
+</li>
+<li>Archaeology</li>
+<li>Astronomy</li>
+<li>Chemistry</li>
+<li>Earth and atmospheric sciences<ul>
+<li>Environmental sciences</li>
+</ul>
+</li>
+<li>Engineering<ul>
+<li>Computer-aided design</li>
+</ul>
+</li>
+<li>Physics</li>
+<li>Mathematics and statistics</li>
+<li>Electronics<ul>
+<li>Avionics</li>
+</ul>
+</li>
+<li>Telecommunications<ul>
+<li>Internet telephony<h2 id="生命与医学"><a href="#生命与医学" class="headerlink" title="生命与医学"></a>生命与医学</h2></li>
+</ul>
+</li>
+<li>Computational biology<ul>
+<li>Molecular sequence analysis</li>
+<li>Recognition of genes and regulatory elements</li>
+<li>Molecular evolution</li>
+<li>Computational transcriptomics</li>
+<li>Biological networks</li>
+<li>Sequencing and genotyping technologies</li>
+<li>Imaging</li>
+<li>Computational proteomics</li>
+<li>Molecular structural biology</li>
+<li>Computational genomics</li>
+</ul>
+</li>
+<li>Genomics<ul>
+<li>Computational genomics</li>
+</ul>
+</li>
+<li>Systems biology</li>
+<li>Consumer health</li>
+<li>Health care information systems</li>
+<li>Health informatics</li>
+<li>Bioinformatics</li>
+<li>Metabolomics / metabonomics</li>
+<li>Genetics<ul>
+<li>Population genetics</li>
+<li>Proteomics<ul>
+<li>Computational proteomics</li>
+</ul>
+</li>
+<li>Transcriptomics<h2 id="法律、社会科学与行为科学"><a href="#法律、社会科学与行为科学" class="headerlink" title="法律、社会科学与行为科学"></a>法律、社会科学与行为科学</h2></li>
+</ul>
+</li>
+<li>Anthropology<ul>
+<li>Ethnography</li>
+</ul>
+</li>
+<li>Law</li>
+<li>Psychology</li>
+<li>Economics</li>
+<li>Sociology<h2 id="计算机鉴别"><a href="#计算机鉴别" class="headerlink" title="计算机鉴别"></a><a href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E8%85%A6%E9%91%91%E8%AD%98" target="_blank" rel="noopener">计算机鉴别</a></h2></li>
+<li>Surveillance mechanisms</li>
+<li>Investigation techniques</li>
+<li>Evidence collection, storage and analysis</li>
+<li>Network forensics</li>
+<li>System forensics</li>
+<li>Data recovery<h2 id="人文艺术"><a href="#人文艺术" class="headerlink" title="人文艺术"></a>人文艺术</h2></li>
+<li>Fine arts</li>
+<li>Performing arts</li>
+<li>Architecture (buildings)<ul>
+<li>Computer-aided design</li>
+</ul>
+</li>
+<li>Language translation</li>
+<li>Media arts</li>
+<li>Sound and music computing<h2 id="其它领域的计算机"><a href="#其它领域的计算机" class="headerlink" title="其它领域的计算机"></a>其它领域的计算机</h2></li>
+<li>Digital libraries and archives</li>
+<li>Publishing</li>
+<li>Military<ul>
+<li>Cyberwarfare</li>
+</ul>
+</li>
+<li>Cartography</li>
+<li>Agriculture</li>
+<li>Computing in government<ul>
+<li>Voting / election technologies</li>
+<li>E-government</li>
+</ul>
+</li>
+<li>Personal computers and PC applications<ul>
+<li>Word processors</li>
+<li>Spreadsheets</li>
+<li>Computer games</li>
+<li>Microcomputers<h2 id="运筹学"><a href="#运筹学" class="headerlink" title="运筹学"></a><a href="https://zh.wikipedia.org/wiki/%E9%81%8B%E7%B1%8C%E5%AD%B8" target="_blank" rel="noopener">运筹学</a></h2></li>
+</ul>
+</li>
+<li>Consumer products</li>
+<li>Industry and manufacturing<ul>
+<li>Supply chain management</li>
+<li>Command and control</li>
+</ul>
+</li>
+<li>Computer-aided manufacturing</li>
+<li>Decision analysis<ul>
+<li>Multi-criterion optimization and decision-making</li>
+</ul>
+</li>
+<li>Transportation</li>
+<li>Forecasting</li>
+<li>Marketing<h2 id="教育"><a href="#教育" class="headerlink" title="教育"></a>教育</h2></li>
+<li>Digital libraries and archives</li>
+<li>Computer-assisted instruction</li>
+<li>Interactive learning environments</li>
+<li>Collaborative learning</li>
+<li>Learning management systems</li>
+<li>Distance learning</li>
+<li>E-learning</li>
+<li>Computer-managed instruction<h2 id="文件管理与文字处理"><a href="#文件管理与文字处理" class="headerlink" title="文件管理与文字处理"></a>文件管理与文字处理</h2></li>
+<li>Document searching</li>
+<li>Document management<ul>
+<li>Text editing</li>
+<li>Version control</li>
+<li>Document metadata</li>
+</ul>
+</li>
+<li>Document capture<ul>
+<li>Document analysis</li>
+<li>Document scanning</li>
+<li>Graphics recognition and interpretation</li>
+<li>Optical character recognition</li>
+<li>Online handwriting recognition</li>
+</ul>
+</li>
+<li>Document preparation<ul>
+<li>Markup languages<ul>
+<li>Extensible Markup Language (XML)</li>
+<li>Hypertext languages</li>
+</ul>
+</li>
+<li>Annotation</li>
+<li>Format and notation</li>
+<li>Multi / mixed media creation</li>
+<li>Image composition</li>
+<li>Hypertext / hypermedia creation</li>
+<li>Document scripting languages<h1 id="社会和职业话题"><a href="#社会和职业话题" class="headerlink" title="社会和职业话题"></a>社会和职业话题</h1><h2 id="职业话题"><a href="#职业话题" class="headerlink" title="职业话题"></a>职业话题</h2></li>
+</ul>
+</li>
+<li>Computing industry<ul>
+<li>Industry statistics</li>
+<li>Computer manufacturing</li>
+<li>Sustainability</li>
+</ul>
+</li>
+<li>Management of computing and information systems<ul>
+<li>Project and people management<ul>
+<li>Project management techniques</li>
+<li>Project staffing</li>
+<li>Systems planning</li>
+<li>Systems analysis and design</li>
+<li>Systems development</li>
+<li>Computer and information systems training</li>
+</ul>
+</li>
+<li>Implementation management<ul>
+<li>Hardware selection</li>
+<li>Computing equipment management</li>
+<li>Pricing and resource allocation</li>
+</ul>
+</li>
+<li>Software management<ul>
+<li>Software maintenance</li>
+<li>Software selection and adaptation</li>
+</ul>
+</li>
+<li>System management<ul>
+<li>Centralization / decentralization</li>
+<li>Technology audits</li>
+<li>Quality assurance</li>
+</ul>
+</li>
+<li>Network operations</li>
+<li>File systems management</li>
+<li>Information system economics</li>
+</ul>
+</li>
+<li>History of computing<ul>
+<li>Historical people</li>
+<li>History of hardware</li>
+<li>History of software</li>
+<li>History of programming languages</li>
+<li>History of computing theory</li>
+</ul>
+</li>
+<li>Computing education<ul>
+<li>Computational thinking</li>
+<li>Accreditation</li>
+<li>Model curricula</li>
+<li>Computing education programs<ul>
+<li>Information systems education</li>
+<li>Computer science education<ul>
+<li>CS1</li>
+</ul>
+</li>
+<li>Computer engineering education</li>
+<li>Information technology education</li>
+<li>Information science education</li>
+<li>Computational science and engineering education</li>
+<li>Software engineering education</li>
+</ul>
+</li>
+<li>Informal education</li>
+<li>Computing literacy</li>
+<li>Student assessment</li>
+<li>K-12 education</li>
+<li>Adult education</li>
+</ul>
+</li>
+<li>Computing and business<ul>
+<li>Employment issues</li>
+<li>Automation</li>
+<li>Computer supported cooperative work</li>
+<li>Economic impact</li>
+<li>Offshoring</li>
+<li>Reengineering</li>
+<li>Socio-technical systems</li>
+</ul>
+</li>
+<li>Computing profession<ul>
+<li>Codes of ethics</li>
+<li>Employment issues</li>
+<li>Funding</li>
+<li>Computing occupations</li>
+<li>Computing organizations</li>
+<li>Testing, certification and licensing</li>
+<li>Assistive technologies<h2 id="计算-技术政策"><a href="#计算-技术政策" class="headerlink" title="计算/技术政策"></a>计算/技术政策</h2></li>
+</ul>
+</li>
+<li>Intellectual property<ul>
+<li>Digital rights management</li>
+<li>Copyrights</li>
+<li>Software reverse engineering</li>
+<li>Patents</li>
+<li>Trademarks</li>
+<li>Internet governance / domain names</li>
+<li>Licensing</li>
+<li>Treaties</li>
+<li>Database protection laws</li>
+<li>Secondary liability</li>
+<li>Soft intellectual property</li>
+<li>Hardware reverse engineering</li>
+</ul>
+</li>
+<li>Privacy policies</li>
+<li>Censorship<ul>
+<li>Pornography</li>
+<li>Hate speech</li>
+<li>Political speech</li>
+<li>Technology and censorship</li>
+<li>Censoring filters</li>
+</ul>
+</li>
+<li>Surveillance<ul>
+<li>Governmental surveillance</li>
+<li>Corporate surveillance</li>
+</ul>
+</li>
+<li>Commerce policy<ul>
+<li>Taxation</li>
+<li>Transborder data flow</li>
+<li>Antitrust and competition</li>
+<li>Governmental regulations</li>
+<li>Online auctions policy</li>
+<li>Consumer products policy</li>
+</ul>
+</li>
+<li>Network access control<ul>
+<li>Censoring filters</li>
+<li>Broadband access</li>
+<li>Net neutrality</li>
+<li>Network access restrictions<ul>
+<li>Age-based restrictions</li>
+<li>Acceptable use policy restrictions</li>
+</ul>
+</li>
+<li>Universal access</li>
+</ul>
+</li>
+<li>Computer crime<ul>
+<li>Social engineering attacks<ul>
+<li>Spoofing attacks</li>
+<li>Phishing</li>
+</ul>
+</li>
+<li>Identity theft</li>
+<li>Financial crime</li>
+<li>Malware / spyware crime</li>
+</ul>
+</li>
+<li>Government technology policy<ul>
+<li>Governmental regulations</li>
+<li>Import / export controls</li>
+</ul>
+</li>
+<li>Medical information policy<ul>
+<li>Medical records</li>
+<li>Personal health records</li>
+<li>Genetic information</li>
+<li>Patient privacy</li>
+<li>Health information exchanges</li>
+<li>Medical technologies<ul>
+<li>Remote medicine<h2 id="用户特征"><a href="#用户特征" class="headerlink" title="用户特征"></a>用户特征</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Race and ethnicity</li>
+<li>Religious orientation</li>
+<li>Gender<ul>
+<li>Men</li>
+<li>Women</li>
+</ul>
+</li>
+<li>Sexual orientation</li>
+<li>People with disabilities</li>
+<li>Geographic characteristics</li>
+<li>Cultural characteristics</li>
+<li>Age<ul>
+<li>Children</li>
+<li>Seniors</li>
+<li>Adolescents</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+
+  <div id="gitalk-container"></div>
+  <script>
+    const gitalk = new Gitalk({
+    clientID: '3a4208141f5f4dcec1d8',
+    clientSecret: '6132f41eb08ee6d6ef65824adf6c70a6dfc306bf',
+    repo: 'blog-static',
+    owner: 'dingziqi',
+    admin: ['dingziqi'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#硬件"><span class="toc-number">1.</span> <span class="toc-text">硬件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#印刷电路板"><span class="toc-number">1.1.</span> <span class="toc-text">印刷电路板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通信硬件、接口及存储"><span class="toc-number">1.2.</span> <span class="toc-text">通信硬件、接口及存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集成电路"><span class="toc-number">1.3.</span> <span class="toc-text">集成电路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超大规模集成电路"><span class="toc-number">1.4.</span> <span class="toc-text">超大规模集成电路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电力和能源"><span class="toc-number">1.5.</span> <span class="toc-text">电力和能源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电子设计自动化"><span class="toc-number">1.6.</span> <span class="toc-text">电子设计自动化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件验证"><span class="toc-number">1.7.</span> <span class="toc-text">硬件验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件测试"><span class="toc-number">1.8.</span> <span class="toc-text">硬件测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#健壮性"><span class="toc-number">1.9.</span> <span class="toc-text">健壮性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新兴技术"><span class="toc-number">1.10.</span> <span class="toc-text">新兴技术</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机系统组织"><span class="toc-number">2.</span> <span class="toc-text">计算机系统组织</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#架构"><span class="toc-number">2.1.</span> <span class="toc-text">架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#嵌入式和网络物理系统"><span class="toc-number">2.2.</span> <span class="toc-text">嵌入式和网络物理系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实时系统"><span class="toc-number">2.3.</span> <span class="toc-text">实时系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可靠且容错的系统和网络"><span class="toc-number">2.4.</span> <span class="toc-text">可靠且容错的系统和网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络"><span class="toc-number">3.</span> <span class="toc-text">网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络架构"><span class="toc-number">3.1.</span> <span class="toc-text">网络架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络协议"><span class="toc-number">3.2.</span> <span class="toc-text">网络协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络组件"><span class="toc-number">3.3.</span> <span class="toc-text">网络组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络算法"><span class="toc-number">3.4.</span> <span class="toc-text">网络算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络性能评估"><span class="toc-number">3.5.</span> <span class="toc-text">网络性能评估</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络属性"><span class="toc-number">3.6.</span> <span class="toc-text">网络属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络服务"><span class="toc-number">3.7.</span> <span class="toc-text">网络服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络类型"><span class="toc-number">3.8.</span> <span class="toc-text">网络类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件及其工程"><span class="toc-number">4.</span> <span class="toc-text">软件及其工程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件组织和属性"><span class="toc-number">4.1.</span> <span class="toc-text">软件组织和属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件表示法及工具"><span class="toc-number">4.2.</span> <span class="toc-text">软件表示法及工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件创建及管理"><span class="toc-number">4.3.</span> <span class="toc-text">软件创建及管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算理论"><span class="toc-number">5.</span> <span class="toc-text">计算理论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算模型"><span class="toc-number">5.1.</span> <span class="toc-text">计算模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形式语言及自动机理论"><span class="toc-number">5.2.</span> <span class="toc-text">形式语言及自动机理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算复杂度及密码学"><span class="toc-number">5.3.</span> <span class="toc-text">计算复杂度及密码学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑学"><span class="toc-number">5.4.</span> <span class="toc-text">逻辑学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法设计与分析"><span class="toc-number">5.5.</span> <span class="toc-text">算法设计与分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机性、几何学和离散结构"><span class="toc-number">5.6.</span> <span class="toc-text">随机性、几何学和离散结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用领域理论和算法"><span class="toc-number">5.7.</span> <span class="toc-text">应用领域理论和算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语义及推理"><span class="toc-number">5.8.</span> <span class="toc-text">语义及推理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机数学"><span class="toc-number">6.</span> <span class="toc-text">计算机数学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#离散数学"><span class="toc-number">6.1.</span> <span class="toc-text">离散数学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概览论与统计学"><span class="toc-number">6.2.</span> <span class="toc-text">概览论与统计学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学软件"><span class="toc-number">6.3.</span> <span class="toc-text">数学软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息论"><span class="toc-number">6.4.</span> <span class="toc-text">信息论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学分析"><span class="toc-number">6.5.</span> <span class="toc-text">数学分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连续数学"><span class="toc-number">6.6.</span> <span class="toc-text">连续数学</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信息系统"><span class="toc-number">7.</span> <span class="toc-text">信息系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据管理系统"><span class="toc-number">7.1.</span> <span class="toc-text">数据管理系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据存储系统"><span class="toc-number">7.2.</span> <span class="toc-text">数据存储系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息系统的应用"><span class="toc-number">7.3.</span> <span class="toc-text">信息系统的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网"><span class="toc-number">7.4.</span> <span class="toc-text">互联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息检索"><span class="toc-number">7.5.</span> <span class="toc-text">信息检索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全与隐私"><span class="toc-number">8.</span> <span class="toc-text">安全与隐私</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#密码学"><span class="toc-number">8.1.</span> <span class="toc-text">密码学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全的形式方法及理论"><span class="toc-number">8.2.</span> <span class="toc-text">安全的形式方法及理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全服务"><span class="toc-number">8.3.</span> <span class="toc-text">安全服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入侵-异常检测与恶意软件拦截"><span class="toc-number">8.4.</span> <span class="toc-text">入侵/异常检测与恶意软件拦截</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件安全"><span class="toc-number">8.5.</span> <span class="toc-text">硬件安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统安全"><span class="toc-number">8.6.</span> <span class="toc-text">系统安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络安全"><span class="toc-number">8.7.</span> <span class="toc-text">网络安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库和存储安全"><span class="toc-number">8.8.</span> <span class="toc-text">数据库和存储安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件和应用安全"><span class="toc-number">8.9.</span> <span class="toc-text">软件和应用安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全与隐私的人文与社会"><span class="toc-number">8.10.</span> <span class="toc-text">安全与隐私的人文与社会</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#以人为本的计算机"><span class="toc-number">9.</span> <span class="toc-text">以人为本的计算机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#人机交互"><span class="toc-number">9.1.</span> <span class="toc-text">人机交互</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交互设计"><span class="toc-number">9.2.</span> <span class="toc-text">交互设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协作及社交计算"><span class="toc-number">9.3.</span> <span class="toc-text">协作及社交计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#普适计算"><span class="toc-number">9.4.</span> <span class="toc-text">普适计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可视化"><span class="toc-number">9.5.</span> <span class="toc-text">可视化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助功能"><span class="toc-number">9.6.</span> <span class="toc-text">辅助功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算方法"><span class="toc-number">10.</span> <span class="toc-text">计算方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#符号和代数运算"><span class="toc-number">10.1.</span> <span class="toc-text">符号和代数运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并行计算方法"><span class="toc-number">10.2.</span> <span class="toc-text">并行计算方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人工智能"><span class="toc-number">10.3.</span> <span class="toc-text">人工智能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习"><span class="toc-number">10.4.</span> <span class="toc-text">机器学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建模与模拟"><span class="toc-number">10.5.</span> <span class="toc-text">建模与模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机图形"><span class="toc-number">10.6.</span> <span class="toc-text">计算机图形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式计算方法"><span class="toc-number">10.7.</span> <span class="toc-text">分布式计算方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并发计算方法"><span class="toc-number">10.8.</span> <span class="toc-text">并发计算方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#应用计算"><span class="toc-number">11.</span> <span class="toc-text">应用计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电子商务"><span class="toc-number">11.1.</span> <span class="toc-text">电子商务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#企业计算"><span class="toc-number">11.2.</span> <span class="toc-text">企业计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#物理科学与工程"><span class="toc-number">11.3.</span> <span class="toc-text">物理科学与工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命与医学"><span class="toc-number">11.4.</span> <span class="toc-text">生命与医学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法律、社会科学与行为科学"><span class="toc-number">11.5.</span> <span class="toc-text">法律、社会科学与行为科学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机鉴别"><span class="toc-number">11.6.</span> <span class="toc-text">计算机鉴别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人文艺术"><span class="toc-number">11.7.</span> <span class="toc-text">人文艺术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它领域的计算机"><span class="toc-number">11.8.</span> <span class="toc-text">其它领域的计算机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运筹学"><span class="toc-number">11.9.</span> <span class="toc-text">运筹学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#教育"><span class="toc-number">11.10.</span> <span class="toc-text">教育</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件管理与文字处理"><span class="toc-number">11.11.</span> <span class="toc-text">文件管理与文字处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#社会和职业话题"><span class="toc-number">12.</span> <span class="toc-text">社会和职业话题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#职业话题"><span class="toc-number">12.1.</span> <span class="toc-text">职业话题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算-技术政策"><span class="toc-number">12.2.</span> <span class="toc-text">计算/技术政策</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户特征"><span class="toc-number">12.3.</span> <span class="toc-text">用户特征</span></a></li></ol></li></ol>
+    </div>
+
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="iconfont icon-menu" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="iconfont icon-category" aria-hidden="true"></i> 目录</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 D.Z
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<!-- <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"> -->
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-125054760-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e46b40b284daa44636921a40671f422c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

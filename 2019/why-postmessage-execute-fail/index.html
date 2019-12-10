@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="最近在使用了postMessage的项目中遇到了一个报错，报错的大致内容如下： 123(index):20 Failed to execute &amp;apos;postMessage&amp;apos; on &amp;apos;DOMWindow&amp;apos;:The target origin provided (&amp;apos;http://www.a.com&amp;apos;) does not match the re">
+<meta name="keywords" content="web前端,JavaScript,FE,程序员">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postMessage execute fail 之谜">
+<meta property="og:url" content="http://dingziqi.com/2019/why-postmessage-execute-fail/index.html">
+<meta property="og:site_name" content="D.Z&#39;blog">
+<meta property="og:description" content="最近在使用了postMessage的项目中遇到了一个报错，报错的大致内容如下： 123(index):20 Failed to execute &amp;apos;postMessage&amp;apos; on &amp;apos;DOMWindow&amp;apos;:The target origin provided (&amp;apos;http://www.a.com&amp;apos;) does not match the re">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-10T12:10:27.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="postMessage execute fail 之谜">
+<meta name="twitter:description" content="最近在使用了postMessage的项目中遇到了一个报错，报错的大致内容如下： 123(index):20 Failed to execute &amp;apos;postMessage&amp;apos; on &amp;apos;DOMWindow&amp;apos;:The target origin provided (&amp;apos;http://www.a.com&amp;apos;) does not match the re">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>postMessage execute fail 之谜</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1409629_m6zyxfcrpkl.css">
+
+    <!-- gtalk-->
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+      <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="iconfont icon-menu"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="iconfont icon-arrow icon-arrow-up"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/category-in-css2012/"><i class="iconfont icon-arrow icon-arrow-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/trouble-shooting-in-github-action/"><i class="iconfont icon-arrow icon-arrow-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+    </span>
+    <br>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        postMessage execute fail 之谜
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">D.Z'blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-11-21T15:39:44.000Z" itemprop="datePublished">2019-11-21</time>
+        
+        (Updated: <time datetime="2019-12-10T12:10:27.191Z" itemprop="dateModified">2019-12-10</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="iconfont icon-folder"></i>
+        <a class="category-link" href="/categories/io/">0/1</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>最近在使用了<code>postMessage</code>的项目中遇到了一个报错，报错的大致内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(index):20 Failed to execute &apos;postMessage&apos; on &apos;DOMWindow&apos;:</span><br><span class="line">The target origin provided (&apos;http://www.a.com&apos;) does not match the recipient</span><br><span class="line">window&apos;s origin (&apos;http://www.b.com&apos;).</span><br></pre></td></tr></table></figure>
+
+<p>当时的html页面结构大致是这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">&lt;!-- www.b.com --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">      ...</span><br><span class="line"><span class="javascript">      <span class="comment">// 这里是在一个异步操作中</span></span></span><br><span class="line"><span class="javascript">      iframe.src = <span class="string">'http://www.a.com'</span>;</span></span><br><span class="line"></span><br><span class="line">      ...</span><br><span class="line"><span class="javascript">      <span class="comment">// 有多次 postMessage 操作</span></span></span><br><span class="line"><span class="javascript">      iframe.contentWindow.postMessage(<span class="string">'message'</span>, <span class="string">'http://www.a.com'</span>);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>从报错信息来看似乎是因为调用 postMessage 传入的 targetOrigin 和对应 iframe 实际的 url 不一致导致的，那这可能是 postMessage 对 targetOrigin 校验错误信息。但是我 postMessage 中设置的 targetOrigin 是和 iframe 的 url 是一模一样的。而且错误信息中提示我 recipient window 的origin 是 <a href="http://www.b.com，我并没有给" target="_blank" rel="noopener">http://www.b.com，我并没有给</a> iframe 设置过类似的 url。并且后续的 postMessage 操作又没有报这个错误了。</p>
+<p>经过我一番 debug 之后才发现，报错是发生在异步设置 iframe 的 src 之前，也就是说是当时的 iframe 的 src 并没有值。但是抛出的异常信息又说 recipient window 的 origin 的值是 b.com，简直是在误导我…</p>
+<p>并且，我 debug 的过程中我还发现了一个更毁三观的问题。当我试着把 iframe 的 src 改成 <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a> （与 targetOrigin 不同时），竟然不会报上面那个错。WTF！那我前面的猜想<code>那这可能是 postMessage 对 targetOrigin 校验错误信息</code> 不就是错的了。</p>
+<p>我只好又写了几个 demo 来测试，最后发现只有在 iframe 的 src 没有值，或者它的值中的主机名与 targetOrigin 中的主机名一致，但是 origin 又不一致（即端口或者协议不同）的情况下才会抛出是上面那个错误。如： <code>http://www.a.com</code> 与 <code>http://www.a.com:8080</code> 才会报错。<code>http://www.a.com</code> 与 <code>http://www.b.com</code> 这样并不会报错，只是 message 不会被传递而已。</p>
+<p><strong>另外讲一个写 demo 过程中发现的问题。</strong> <a href="https://codepen.io/" target="_blank" rel="noopener">https://codepen.io/</a> 和 <a href="https://jsbin.com/" target="_blank" rel="noopener">https://jsbin.com/</a> 这两个在线编辑器中，如果我在 <code>HTML</code> tab 中有 iframe 标签的话，那我在 <code>JavaScript</code> tab 编写的内容会被添加我自己编写的 iframe 中…。这个 bug 也是醉人呐~</p>
+
+  </div>
+</article>
+
+
+
+
+  <div id="gitalk-container"></div>
+  <script>
+    const gitalk = new Gitalk({
+    clientID: '3a4208141f5f4dcec1d8',
+    clientSecret: '6132f41eb08ee6d6ef65824adf6c70a6dfc306bf',
+    repo: 'blog-static',
+    owner: 'dingziqi',
+    admin: ['dingziqi'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="iconfont icon-menu" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="iconfont icon-category" aria-hidden="true"></i> 目录</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="iconfont icon-arrow icon-arrow-up" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 D.Z
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/categories/io/">0/1</a></li>
+         
+          <li><a href="/categories/idea/">脑洞</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<!-- <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"> -->
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-125054760-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e46b40b284daa44636921a40671f422c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
